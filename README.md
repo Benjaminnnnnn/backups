@@ -1,1 +1,4 @@
-# Backups for all application configs
+# Backups
+
+- Tmux
+- Neovim
