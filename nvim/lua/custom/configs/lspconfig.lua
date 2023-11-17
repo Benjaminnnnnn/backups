@@ -11,6 +11,7 @@ local servers = {
   "tsserver",
   "rust_analyzer",
   "tailwindcss",
+  "pyright",
 }
 
 local function organize_imports()

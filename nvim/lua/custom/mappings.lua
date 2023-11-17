@@ -69,4 +69,33 @@ M.gitsigns = {
   },
 }
 
+M.general = {
+  n = {
+    ["<F2>"] = {
+      "<Cmd> lua vim.lsp.buf.rename() <CR>",
+      "Rename symbols",
+    },
+  },
+}
+
+M.harpoon = {
+  n = {
+    ["<leader>ha"] = {
+      "<cmd> :lua require('harpoon.mark').add_file() <CR>",
+      "Add current buffer to harpoon marks list",
+    },
+    ["<leader>ht"] = {
+      "<cmd> :lua require('harpoon.ui').toggle_quick_menu() <CR>",
+      "Toggle harpoon marks list",
+    },
+  },
+}
+-- Add mappings for <leader>h1 through <leader>h9 in a loop
+for i = 1, 9 do
+  M.harpoon.n[string.format("<leader>h%d", i)] = {
+    string.format("<cmd>lua require('harpoon.ui').nav_file(%d)<CR>", i),
+    string.format("Harpoon navigate to file %d", i),
+  }
+end
+
 return M

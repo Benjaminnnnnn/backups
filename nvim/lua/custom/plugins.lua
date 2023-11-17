@@ -9,6 +9,7 @@ local plugins = {
         "lua",
         "go",
         "rust",
+        "python",
 
         -- web dev
         "html",
@@ -40,12 +41,13 @@ local plugins = {
     opts = {
       ensure_installed = {
         "gopls",
-        "rust-analyzer",
-        "typescript-language-server",
-        "prettier",
         "js-debug-adapter",
         "lua-language-server",
+        "prettier",
+        "pyright",
+        "rust-analyzer",
         "tailwindcss-language-server",
+        "typescript-language-server",
       },
     },
   },
@@ -88,6 +90,10 @@ local plugins = {
   },
   {
     "tpope/vim-surround",
+    lazy = false,
+  },
+  {
+    "ThePrimeagen/harpoon",
   },
 }
 
