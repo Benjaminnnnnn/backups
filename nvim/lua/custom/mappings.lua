@@ -33,7 +33,7 @@ M.telescope = {
     },
 
     -- git pickers
-    ["<leader>gb"] = {
+    ["<leader>gc"] = {
       "<cmd> Telescope git_branches <CR>",
       "List all git branches",
     },
@@ -46,6 +46,25 @@ M.telescope = {
     ["<F12>"] = {
       "<cmd> Telescope lsp_definitions <CR>",
       "Go to definition",
+    },
+    ["<leader>ds"] = {
+      "<cmd> Telescope lsp_document_symbols <CR>",
+      "List symbols in current buffer",
+    },
+    ["<leader>ws"] = {
+      "<cmd> Telescope lsp_workspace_symbols <CR>",
+      "List symbols across workspace",
+    },
+  },
+}
+
+M.gitsigns = {
+  n = {
+    ["<leader>gd"] = {
+      function()
+        require("gitsigns").diffthis()
+      end,
+      "Git diff current buffer",
     },
   },
 }

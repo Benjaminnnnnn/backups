@@ -3,7 +3,15 @@ local on_attach = configs.on_attach
 local capabilities = configs.capabilities
 
 local lspconfig = require "lspconfig"
-local servers = { "html", "cssls", "clangd", "gopls", "tsserver", "rust_analyzer" }
+local servers = {
+  "html",
+  "cssls",
+  "clangd",
+  "gopls",
+  "tsserver",
+  "rust_analyzer",
+  "tailwindcss",
+}
 
 local function organize_imports()
   local params = {

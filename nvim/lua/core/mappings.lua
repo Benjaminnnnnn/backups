@@ -451,7 +451,7 @@ M.gitsigns = {
 
     ["<leader>gb"] = {
       function()
-        package.loaded.gitsigns.blame_line()
+        package.loaded.gitsigns.blame_line { opts = { full = true } }
       end,
       "Blame line",
     },

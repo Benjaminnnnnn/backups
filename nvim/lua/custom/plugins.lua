@@ -45,6 +45,7 @@ local plugins = {
         "prettier",
         "js-debug-adapter",
         "lua-language-server",
+        "tailwindcss-language-server",
       },
     },
   },
