@@ -56,9 +56,9 @@ M.gitsigns = {
     delete = { text = "󰍵" },
     topdelete = { text = "‾" },
     changedelete = { text = "~" },
-    untracked = { text = "?" },
+    untracked = { text = "|" },
   },
-  numhl = true,
+  numhl = false,
   linehl = false,
   current_line_blame = true,
   current_line_blame_opts = {

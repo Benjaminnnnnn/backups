@@ -1,5 +1,38 @@
 local M = {}
 
+M.general = {
+  n = {
+    ["<leader>tt"] = {
+      function()
+        require("base46").toggle_transparency()
+      end,
+      "Toggle transparency",
+    },
+    ["<leader>qa"] = {
+      function()
+        require("nvchad.tabufline").closeAllBufs()
+      end,
+      "Close all buffers in current tab",
+    },
+    ["<leader>mbr"] = {
+      function()
+        require("nvchad.tabufline").move_buf(1)
+      end,
+      "Move buffer right",
+    },
+    ["<leader>mbl"] = {
+      function()
+        require("nvchad.tabufline").move_buf(-1)
+      end,
+      "Move buffer left",
+    },
+    ["<F2>"] = {
+      "<Cmd> lua vim.lsp.buf.rename() <CR>",
+      "Rename symbols",
+    },
+  },
+}
+
 M.dap = {
   plugin = true,
   n = {
@@ -65,15 +98,6 @@ M.gitsigns = {
         require("gitsigns").diffthis()
       end,
       "Git diff current buffer",
-    },
-  },
-}
-
-M.general = {
-  n = {
-    ["<F2>"] = {
-      "<Cmd> lua vim.lsp.buf.rename() <CR>",
-      "Rename symbols",
     },
   },
 }

@@ -40,14 +40,26 @@ local plugins = {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+        -- lsp
         "gopls",
-        "js-debug-adapter",
         "lua-language-server",
-        "prettier",
         "pyright",
         "rust-analyzer",
         "tailwindcss-language-server",
         "typescript-language-server",
+        "bash-language-server",
+        "shellcheck",
+
+        -- formatter
+        "prettier",
+        "gofumpt",
+        "goimports-reviser",
+        "golines",
+        "shfmt",
+
+        -- dap
+        "js-debug-adapter",
+        "go-debug-adapter",
       },
     },
   },
@@ -87,6 +99,7 @@ local plugins = {
   },
   {
     "christoomey/vim-tmux-navigator",
+    lazy = false,
   },
   {
     "tpope/vim-surround",
@@ -94,6 +107,20 @@ local plugins = {
   },
   {
     "ThePrimeagen/harpoon",
+  },
+  {
+    "olexsmir/gopher.nvim",
+    ft = "go",
+    config = function(_, opts)
+      require("gopher").setup(opts)
+    end,
+    build = function()
+      vim.cmd [[silent! GoInstallDeps]]
+    end,
+  },
+
+  {
+    "wakatime/vim-wakatime",
   },
 }
 
