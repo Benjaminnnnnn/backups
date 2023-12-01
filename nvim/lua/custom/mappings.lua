@@ -112,6 +112,14 @@ M.harpoon = {
       "<cmd> :lua require('harpoon.ui').toggle_quick_menu() <CR>",
       "Toggle harpoon marks list",
     },
+    ["<C-t>"] = {
+      "<cmd> :lua require(harpoon.ui).nav_next() <CR>",
+      "Go to next harpoon file",
+    },
+    ["<C-p>"] = {
+      "<cmd> :lua require(harpoon.ui).nav_prev() <CR>",
+      "Go to previous harpoon file",
+    },
   },
 }
 -- Add mappings for <leader>h1 through <leader>h9 in a loop
