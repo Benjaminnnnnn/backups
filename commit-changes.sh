@@ -5,8 +5,8 @@ cd $(dirname "$0")
 cp $HOME/.tmux.conf ./tmux/
 
 # nvim config
-cp -rf $HOME/.config/nvim $HOME/backups/.
-rm -rf $HOME/backups/nvim/.git $HOME/backups/nvim/.github
+cp -rf $HOME/.config/nvim/* ./nvim/
+rm -rf ./nvim/.git .nvim/.github
 
 # zsh config
 cp $HOME/.zshrc ./zsh/
