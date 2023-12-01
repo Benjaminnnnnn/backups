@@ -155,8 +155,8 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # 643 - Reshiram
 # 717 - Yveltal
 # pokemon 249
-# pokemon 643
-pokemon 717
+pokemon 643
+# pokemon 717
 
 # login message
 #fortune | cowpy -c dragonandcow | lolcat
