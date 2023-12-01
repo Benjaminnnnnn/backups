@@ -102,32 +102,6 @@ function backup() {
   cp -rf ~/.config/nvim ~/backups/.
   cd ~/backups/nvim
   rm -rf .git .github
-
-  # # Colored yes/no prompt
-  # if [[ $# -eq 0 ]]; then
-  #   msg="Do you want to push the backups to Git? (y/n) "
-  #   echo $msg
-  #   read -rs -k 1 opt
-  #   case $opt in
-  #     y)
-  #       # Optional commit message parameter
-  #       git add .
-  #       read -p "Enter commit message (default: updated configs): " commit_msg
-  #       commit_msg="${commit_msg:-updated configs}"
-  #       git commit -m "$commit_msg"
-  #       git push origin main
-  #       break
-  #       ;;
-  #     n)
-  #       echo "Only backup locally"
-  #       break
-  #       ;;
-  #     *)
-  #       echo "$opt"
-  #       echo "Invalid options";;
-  #   esac
-  # fi
-
   popd > /dev/null
 }
 

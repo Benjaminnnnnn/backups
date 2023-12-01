@@ -58,6 +58,11 @@ local options = {
       case_mode = "smart_case",
     },
   },
+  pickers = {
+    find_files = {
+      find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+    },
+  },
 }
 
 return options
