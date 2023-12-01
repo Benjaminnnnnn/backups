@@ -31,8 +31,6 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-########################################################################
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
 
@@ -41,8 +39,8 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # 643 - Reshiram
 # 717 - Yveltal
 # pokemon 249
-pokemon 643
-# pokemon 717
+# pokemon 643
+pokemon 717
 
 # login message
 #fortune | cowpy -c dragonandcow | lolcat
