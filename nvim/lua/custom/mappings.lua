@@ -116,7 +116,7 @@ M.harpoon = {
 }
 -- Add mappings for <leader>h1 through <leader>h9 in a loop
 for i = 1, 9 do
-  M.harpoon.n[string.format("<leader>h%d", i)] = {
+  M.harpoon.n[string.format("<leader>%d", i)] = {
     string.format("<cmd>lua require('harpoon.ui').nav_file(%d)<CR>", i),
     string.format("Harpoon navigate to file %d", i),
   }
