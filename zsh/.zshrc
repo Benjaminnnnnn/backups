@@ -24,9 +24,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git git-prompt tmux)
 
-# source ~/alien/alien.zsh
 source $ZSH/oh-my-zsh.sh
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+# source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -40,7 +39,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # 717 - Yveltal
 # pokemon 249
 # pokemon 643
-pokemon 717
+# pokemon 717
 
 # login message
 #fortune | cowpy -c dragonandcow | lolcat
