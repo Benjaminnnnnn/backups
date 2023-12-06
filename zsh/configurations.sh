@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 # fzf
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob !.git --glob !node_modules --ignore-file $HOME/.gitignore 2>/dev/null"
