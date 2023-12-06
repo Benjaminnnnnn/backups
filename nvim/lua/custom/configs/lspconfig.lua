@@ -27,6 +27,19 @@ local merge_tb = function(left, right)
   return vim.tbl_deep_extend("force", left, right)
 end
 
+-- make zsh files recognized as sh for bash-ls & treesitter
+vim.filetype.add {
+  extension = {
+    zsh = "sh",
+    sh = "sh", -- force sh-files with zsh-shebang to still get sh as filetype
+  },
+  filename = {
+    [".zshrc"] = "sh",
+    [".zshenv"] = "sh",
+  },
+}
+
+-- configure all lsps
 for _, lsp in ipairs(servers) do
   local opts = {
     on_attach = on_attach,
@@ -69,18 +82,6 @@ for _, lsp in ipairs(servers) do
     },
   }
 end
-
--- make zsh files recognized as sh for bash-ls & treesitter
-vim.filetype.add {
-  extension = {
-    zsh = "sh",
-    sh = "sh", -- force sh-files with zsh-shebang to still get sh as filetype
-  },
-  filename = {
-    [".zshrc"] = "sh",
-    [".zshenv"] = "sh",
-  },
-}
 
 -- go formatting
 -- vim.api.nvim_create_autocmd("BufWritePre", {
