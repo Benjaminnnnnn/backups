@@ -6,8 +6,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # load all configurations
-for config (~/.zsh/*.sh)
+for config in (~/.zsh/*.sh); do
   source $config
+done
 
 
 # Set name of the theme to load --- if set to "random", it will
