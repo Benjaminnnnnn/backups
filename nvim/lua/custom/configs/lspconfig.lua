@@ -70,6 +70,18 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+-- make zsh files recognized as sh for bash-ls & treesitter
+vim.filetype.add {
+  extension = {
+    zsh = "sh",
+    sh = "sh", -- force sh-files with zsh-shebang to still get sh as filetype
+  },
+  filename = {
+    [".zshrc"] = "sh",
+    [".zshenv"] = "sh",
+  },
+}
+
 -- go formatting
 -- vim.api.nvim_create_autocmd("BufWritePre", {
 --   pattern = "*.go",
