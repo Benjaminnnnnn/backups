@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 #timerSelection[0].value; If you come from bash you might have to change your $PATH.
 export PATH=/USR/LOCAL/opt/llvm/bin:/usr/local//Cellar/llvm/16.0.6/bin:$PATH
 export PATH=$PATH:/Users/benjaminzhuang/go/bin
@@ -17,4 +17,3 @@ export NVM_DIR="$HOME/.nvm"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-
