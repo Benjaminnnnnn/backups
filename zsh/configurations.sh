@@ -5,4 +5,4 @@ export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob !.git --glob !no
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS="
   --preview 'bat -n --color=always --theme=OneHalfDark {}'
-  --bind 'ctrl-/:change-preview-window(down|hidden|)' 2&>/dev/null"
+  --bind 'ctrl-/:change-preview-window(down|hidden|)' 2>/dev/null"
