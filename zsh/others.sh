@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 # # >>> conda initialize >>>
 # # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/benjaminzhuang/anaconda3/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
