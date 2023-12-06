@@ -1,10 +1,10 @@
-#!/bin/zsh
+#!/bin/bash
 ##### FUNCTIONS
 function cdcs() {
 	if [[ $# -eq 0 ]]; then
-		cd "/Users/benjaminzhuang/Desktop/CSE_major_courses"
+		cd "/Users/benjaminzhuang/Desktop/CSE_major_courses" || exit
 	else
-		cd "/Users/benjaminzhuang/Desktop/CSE_major_courses/CSE_$1"
+		cd "/Users/benjaminzhuang/Desktop/CSE_major_courses/CSE_$1" || exit
 	fi
 }
 
@@ -29,8 +29,8 @@ function clearscreen() {
 	if [[ $# -eq 0 ]]; then
 		rm ~/Desktop/Screen\ Shot*
 	else
-		for format in $@; do
-			cd ~/Desktop && ls | grep -Ei "$format" | xargs rm
+		for format in "$@"; do
+			cd ~/Desktop && ls | grep -Ei "$format" | xargs rm || exit
 		done
 	fi
 }
@@ -40,7 +40,7 @@ function backup() {
 	echo "Backup nvim configs"
 	pushd . >/dev/null
 	cp -rf ~/.config/nvim ~/backups/.
-	cd ~/backups/nvim
+	cd ~/backups/nvim || exit
 	rm -rf .git .github
-	popd >/dev/null
+	popd >/dev/null || exit
 }
