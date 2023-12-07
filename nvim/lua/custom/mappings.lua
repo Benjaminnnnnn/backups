@@ -66,7 +66,7 @@ M.telescope = {
     },
 
     -- git pickers
-    ["<leader>gc"] = {
+    ["<leader>glb"] = {
       "<cmd> Telescope git_branches <CR>",
       "List all git branches",
     },
