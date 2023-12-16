@@ -106,6 +106,7 @@ M.lazygit = {
   n = {
     ["<leader>lg"] = {
       "<cmd> LazyGit <CR>",
+      "Open LazyGit",
     },
   },
 }
