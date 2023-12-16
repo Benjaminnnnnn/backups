@@ -154,7 +154,7 @@ local plugins = {
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
-    config = function()
+    init = function()
       require("telescope").load_extension "lazygit"
     end,
   },
