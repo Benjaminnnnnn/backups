@@ -102,6 +102,14 @@ M.gitsigns = {
   },
 }
 
+M.lazygit = {
+  n = {
+    ["<leader>lg"] = {
+      "<cmd> LazyGit <CR>",
+    },
+  },
+}
+
 M.harpoon = {
   n = {
     ["<leader>ha"] = {
