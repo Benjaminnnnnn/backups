@@ -57,12 +57,21 @@ M.telescope = {
 
     -- vim pickers
     ["<leader>vj"] = {
-      "<cmd> Telescope jumplists <CR>",
+      "<cmd> Telescope jumplist <CR>",
       "List jump list entries",
     },
     ["<leader>vr"] = {
       "<cmd> Telescope registers <CR>",
       "List registers",
+    },
+    ["<leader>qf"] = {
+      "<cmd> Telescope quickfix <cr>",
+      "List quick fix list",
+    },
+
+    ["<leader>qfh"] = {
+      "<cmd> Telescope quickfixhistory <cr>",
+      "List quick fix history",
     },
 
     -- git pickers
