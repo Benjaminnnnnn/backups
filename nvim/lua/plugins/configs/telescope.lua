@@ -1,5 +1,3 @@
-local trouble = require "trouble.providers.telescope"
-
 local options = {
   defaults = {
     vimgrep_arguments = {
