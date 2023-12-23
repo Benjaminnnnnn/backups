@@ -162,9 +162,7 @@ local plugins = {
   {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
-    init = function()
-      require("telescope").load_extension "todo-comments"
-    end,
+    lazy = false,
   },
 
   { "folke/trouble.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
