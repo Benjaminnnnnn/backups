@@ -10,7 +10,7 @@ local options = {
       "--column",
       "--smart-case",
     },
-    prompt_prefix = " 󰭎 ",
+    prompt_prefix = "   ",
     selection_caret = "  ",
     entry_prefix = "  ",
     initial_mode = "insert",
@@ -56,11 +56,6 @@ local options = {
       override_generic_sorter = true,
       override_file_sorter = true,
       case_mode = "smart_case",
-    },
-  },
-  pickers = {
-    find_files = {
-      find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
     },
   },
 }

@@ -43,7 +43,7 @@ M.general = {
     ["<Down>"] = { 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', "Move down", opts = { expr = true } },
 
     -- new buffer
-    ["<leader>n"] = { "<cmd> enew <CR>", "New buffer" },
+    ["<leader>b"] = { "<cmd> enew <CR>", "New buffer" },
     ["<leader>ch"] = { "<cmd> NvCheatsheet <CR>", "Mapping cheatsheet" },
 
     ["<leader>fm"] = {
@@ -343,19 +343,19 @@ M.nvterm = {
     },
 
     -- new
-    -- ["<leader>h"] = {
-    --   function()
-    --     require("nvterm.terminal").new "horizontal"
-    --   end,
-    --   "New horizontal term",
-    -- },
+    ["<leader>h"] = {
+      function()
+        require("nvterm.terminal").new "horizontal"
+      end,
+      "New horizontal term",
+    },
 
-    -- ["<leader>v"] = {
-    --   function()
-    --     require("nvterm.terminal").new "vertical"
-    --   end,
-    --   "New vertical term",
-    -- },
+    ["<leader>v"] = {
+      function()
+        require("nvterm.terminal").new "vertical"
+      end,
+      "New vertical term",
+    },
   },
 }
 
@@ -451,7 +451,7 @@ M.gitsigns = {
 
     ["<leader>gb"] = {
       function()
-        package.loaded.gitsigns.blame_line { opts = { full = true } }
+        package.loaded.gitsigns.blame_line()
       end,
       "Blame line",
     },
