@@ -128,6 +128,42 @@ M.spectre = {
   },
 }
 
+M.trouble = {
+  n = {
+    ["<leader>xx"] = {
+      function()
+        require("trouble").toggle()
+      end,
+
+      "Toggle Trouble",
+    },
+    ["<leader>xw"] = {
+
+      function()
+        require("trouble").toggle()
+      end,
+    },
+    ["<leader>xb"] = {
+
+      function()
+        require("trouble").toggle()
+      end,
+    },
+    ["<leader>xq"] = {
+
+      function()
+        require("trouble").toggle()
+      end,
+    },
+    ["<leader>xl"] = {
+
+      function()
+        require("trouble").toggle()
+      end,
+    },
+  },
+}
+
 M.harpoon = {
   n = {
     ["<leader>ha"] = {
