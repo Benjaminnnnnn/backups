@@ -132,31 +132,31 @@ M.spectre = {
 
 M.trouble = {
   n = {
-    ["<leader>zx"] = {
+    ["<leader>bx"] = {
       function()
         require("trouble").toggle()
       end,
       "Toggle Trouble",
     },
-    ["<leader>zw"] = {
+    ["<leader>bw"] = {
       function()
         require("trouble").toggle()
       end,
       "Toggle Trouble workspace diagnostics",
     },
-    ["<leader>zb"] = {
+    ["<leader>bb"] = {
       function()
         require("trouble").toggle()
       end,
       "Toggle Trouble buffer diagnostics",
     },
-    ["<leader>zq"] = {
+    ["<leader>bq"] = {
       function()
         require("trouble").toggle()
       end,
       "Toggle Trouble quickfix list",
     },
-    ["<leader>zl"] = {
+    ["<leader>bl"] = {
       function()
         require("trouble").toggle()
       end,
