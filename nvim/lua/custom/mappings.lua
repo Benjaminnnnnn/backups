@@ -27,7 +27,9 @@ M.general = {
       "Move buffer left",
     },
     ["<F2>"] = {
-      "<Cmd> lua vim.lsp.buf.rename() <CR>",
+      function()
+        require("nvchad.renamer").open()
+      end,
       "Rename symbols",
     },
   },
