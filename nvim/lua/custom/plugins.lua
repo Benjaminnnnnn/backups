@@ -159,7 +159,7 @@ local plugins = {
     end,
   },
 
-  { "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
+  { "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" }, lazy = false },
 
   { "folke/trouble.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
 
