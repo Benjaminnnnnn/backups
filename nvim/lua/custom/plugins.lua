@@ -170,7 +170,13 @@ local plugins = {
     end,
   },
 
-  { "folke/trouble.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
+  {
+    "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    init = function()
+      require "trouble"
+    end,
+  },
 
   { "nvim-pack/nvim-spectre" },
 }
