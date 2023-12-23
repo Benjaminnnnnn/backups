@@ -158,6 +158,8 @@ local plugins = {
       require("telescope").load_extension "lazygit"
     end,
   },
+
+  { "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
 }
 
 return plugins
