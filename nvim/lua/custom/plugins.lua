@@ -163,7 +163,7 @@ local plugins = {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     init = function()
-      require "todo-comments"
+      require("todo-comments").setup {}
     end,
   },
 
