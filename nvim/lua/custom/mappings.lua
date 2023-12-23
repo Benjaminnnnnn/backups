@@ -132,7 +132,7 @@ M.spectre = {
 
 M.trouble = {
   n = {
-    ["<leader>bx"] = {
+    ["<leader>bt"] = {
       function()
         require("trouble").toggle()
       end,
