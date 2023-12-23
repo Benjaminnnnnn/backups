@@ -159,13 +159,6 @@ local plugins = {
     end,
   },
 
-  {
-    "rcarriga/nvim-notify",
-    init = function()
-      require("telescope").load_extension "notify"
-    end,
-  },
-
   { "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
 
   { "folke/trouble.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
