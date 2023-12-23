@@ -68,7 +68,7 @@ M.telescope = {
       "<cmd> Telescope quickfix <cr>",
       "List quick fix list",
     },
-    ["<leader>qfh"] = {
+    ["<leader>qh"] = {
       "<cmd> Telescope quickfixhistory <cr>",
       "List quick fix history",
     },
