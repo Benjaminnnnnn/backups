@@ -175,11 +175,11 @@ M.harpoon = {
       "<cmd> :lua require('harpoon.ui').toggle_quick_menu() <CR>",
       "Toggle harpoon marks list",
     },
-    ["<C-,>"] = {
+    ["<C-t>"] = {
       "<cmd> :lua require('harpoon.ui').nav_next() <CR>",
       "Go to next harpoon file",
     },
-    ["<C-.>"] = {
+    ["<C-p>"] = {
       "<cmd> :lua require('harpoon.ui').nav_prev() <CR>",
       "Go to previous harpoon file",
     },
