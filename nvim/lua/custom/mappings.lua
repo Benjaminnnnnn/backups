@@ -134,32 +134,31 @@ M.trouble = {
       function()
         require("trouble").toggle()
       end,
-
       "Toggle Trouble",
     },
     ["<leader>xw"] = {
-
       function()
         require("trouble").toggle()
       end,
+      "Toggle Trouble workspace diagnostics",
     },
     ["<leader>xb"] = {
-
       function()
         require("trouble").toggle()
       end,
+      "Toggle Trouble buffer diagnostics",
     },
     ["<leader>xq"] = {
-
       function()
         require("trouble").toggle()
       end,
+      "Toggle Trouble quickfix list",
     },
     ["<leader>xl"] = {
-
       function()
         require("trouble").toggle()
       end,
+      "Toggle Trouble location list",
     },
   },
 }
