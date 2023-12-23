@@ -190,7 +190,6 @@ for i = 1, 9 do
   M.harpoon.n[string.format("<leader>%d", i)] = {
     string.format("<cmd>lua require('harpoon.ui').nav_file(%d)<CR>", i),
     string.format("Harpoon navigate to file %d", i),
-    require "trouble.providers.telescope",
   }
 end
 
