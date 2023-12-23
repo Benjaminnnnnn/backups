@@ -160,6 +160,8 @@ local plugins = {
   },
 
   { "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
+
+  { "nvim-pack/nvim-spectre" },
 }
 
 return plugins
