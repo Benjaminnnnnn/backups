@@ -140,25 +140,25 @@ M.trouble = {
     },
     ["<leader>bw"] = {
       function()
-        require("trouble").toggle()
+        require("trouble").toggle "workspace_diagnostics"
       end,
       "Toggle Trouble workspace diagnostics",
     },
     ["<leader>bb"] = {
       function()
-        require("trouble").toggle()
+        require("trouble").toggle "document_diagnostics"
       end,
       "Toggle Trouble buffer diagnostics",
     },
     ["<leader>bq"] = {
       function()
-        require("trouble").toggle()
+        require("trouble").toggle "quickfix"
       end,
       "Toggle Trouble quickfix list",
     },
     ["<leader>bl"] = {
       function()
-        require("trouble").toggle()
+        require("trouble").toggle "loclist"
       end,
       "Toggle Trouble location list",
     },
