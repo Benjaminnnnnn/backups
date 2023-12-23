@@ -121,12 +121,12 @@ M.lazygit = {
 
 M.spectre = {
   n = {
-    ['<leader>s'] = {
+    ["<leader>s"] = {
       "<cmd> lua require('spectre').toggle() <CR>",
-      "Toggle Spectre"
-  }
+      "Toggle Spectre",
+    },
+  },
 }
-
 
 M.harpoon = {
   n = {
