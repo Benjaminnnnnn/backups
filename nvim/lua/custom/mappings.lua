@@ -140,27 +140,27 @@ M.trouble = {
     },
     ["<leader>bw"] = {
       function()
-        require("trouble").toggle "workspace_diagnostics"
+        require("trouble").open "workspace_diagnostics"
       end,
-      "Toggle Trouble workspace diagnostics",
+      "Open Trouble workspace diagnostics",
     },
     ["<leader>bb"] = {
       function()
-        require("trouble").toggle "document_diagnostics"
+        require("trouble").open "document_diagnostics"
       end,
-      "Toggle Trouble buffer diagnostics",
+      "Open Trouble buffer diagnostics",
     },
     ["<leader>bq"] = {
       function()
-        require("trouble").toggle "quickfix"
+        require("trouble").open "quickfix"
       end,
-      "Toggle Trouble quickfix list",
+      "Open Trouble quickfix list",
     },
     ["<leader>bl"] = {
       function()
-        require("trouble").toggle "loclist"
+        require("trouble").open "loclist"
       end,
-      "Toggle Trouble location list",
+      "Open Trouble location list",
     },
   },
 }
