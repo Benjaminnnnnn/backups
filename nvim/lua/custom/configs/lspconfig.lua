@@ -68,7 +68,6 @@ for _, lsp in ipairs(servers) do
         tailwindCSS = {
           experimental = {
             classRegex = {
-              -- ".*Styles.*=([^;]*);",
               { "Styles \\=([^;]*);", '"([^"]*)"' },
               { "Classes \\=([^;]*);", '"([^"]*)"' },
               { "Variants \\=([^;]*);", '"([^"]*)"' },
@@ -80,22 +79,4 @@ for _, lsp in ipairs(servers) do
   end
 
   lspconfig[lsp].setup(opts)
-  -- lspconfig[lsp].setup {
-  --   on_attach = on_attach,
-  --   capabilities = capabilities,
-  --   autotag = {
-  --     enable = true,
-  --   },
-  --   init_options = {
-  --     preferences = {
-  --       disableSuggestions = true,
-  --     },
-  --   },
-  --   commands = {
-  --     OrganizeImports = {
-  --       organize_imports,
-  --       description = "Organize Imports",
-  --     },
-  --   },
-  -- }
 end
