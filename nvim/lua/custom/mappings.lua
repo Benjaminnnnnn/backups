@@ -174,14 +174,23 @@ M.trouble = {
   },
 }
 
--- M.aerial = {
---   n = {
---     ["<leader>a"] = {
---       "<cmd>require('aerial').AerialToggle!<CR>",
---       "Toggle Aerial (symbols)",
---     },
---   },
--- }
+M.aerial = {
+  n = {
+    ["<leader>a"] = {
+      "<cmd>require('aerial').AerialToggle!<CR>",
+      "Toggle Aerial (symbols)",
+    },
+  },
+}
+
+M.lspconfig = {
+  n = {
+    ["<leader>o"] = {
+      "<cmd> OrganizeImports <CR>",
+      "Organize Imports",
+    },
+  },
+}
 
 M.harpoon = {
   n = {
