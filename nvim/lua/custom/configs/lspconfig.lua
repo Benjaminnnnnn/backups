@@ -24,7 +24,7 @@ local function organize_imports()
 end
 
 local merge_tb = function(left, right)
-  return vim.tbl_deep_extend("error", left, right)
+  return vim.tbl_deep_extend("force", left, right)
 end
 
 -- configure all lsps
@@ -78,7 +78,6 @@ for _, lsp in ipairs(servers) do
         },
       },
     })
-    print(vim.inspect(opts))
   end
 
   lspconfig[lsp].setup {
