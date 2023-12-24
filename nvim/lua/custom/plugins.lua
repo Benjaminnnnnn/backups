@@ -276,9 +276,6 @@ local plugins = {
   {
     "folke/noice.nvim",
     event = "VeryLazy",
-    opts = function()
-      return require "custom.configs.noice"
-    end,
     dependencies = {
       -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
       "MunifTanjim/nui.nvim",
@@ -287,6 +284,9 @@ local plugins = {
       --   If not available, we use `mini` as the fallback
       "rcarriga/nvim-notify",
     },
+    config = function()
+      require "custom.configs.noice"
+    end,
   },
 }
 
