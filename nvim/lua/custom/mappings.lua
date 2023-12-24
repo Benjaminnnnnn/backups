@@ -180,6 +180,15 @@ M.trouble = {
   },
 }
 
+M.aerial = {
+  n = {
+    ["<leader>a"] = {
+      "<cmd>AerialToggle!<CR>",
+      "Toggle Aerial (symbols)",
+    },
+  },
+}
+
 M.harpoon = {
   n = {
     ["<leader>ha"] = {
