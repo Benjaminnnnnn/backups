@@ -98,17 +98,15 @@ for _, lsp in ipairs(servers) do
     autotag = {
       enable = true,
     },
-    {
-      init_options = {
-        preferences = {
-          disableSuggestions = true,
-        },
+    init_options = {
+      preferences = {
+        disableSuggestions = true,
       },
-      commands = {
-        OrganizeImports = {
-          organize_imports,
-          description = "Organize Imports",
-        },
+    },
+    commands = {
+      OrganizeImports = {
+        organize_imports,
+        description = "Organize Imports",
       },
     },
   }
