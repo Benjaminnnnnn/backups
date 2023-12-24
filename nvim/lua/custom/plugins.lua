@@ -200,7 +200,7 @@ local plugins = {
 
   {
     "stevearc/aerial.nvim",
-    event = "Lazy",
+    event = "VeryLazy",
     -- Optional dependencies
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
