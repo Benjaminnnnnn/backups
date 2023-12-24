@@ -32,6 +32,15 @@ M.general = {
       end,
       "Rename symbols",
     },
+
+    ["]q"] = {
+      "<cmd> cnext <CR>",
+      "Next item in quickfix list",
+    },
+    ["[q"] = {
+      "<cmd> cprev <CR>",
+      "Previous item in quickfix list",
+    },
   },
 }
 
