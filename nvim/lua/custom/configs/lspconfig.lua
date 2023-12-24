@@ -41,7 +41,7 @@ for _, lsp in ipairs(servers) do
 
   -- add extra config for individual lsp
   if lsp == "tsserver" then
-    opts = merge_tb(opts, {
+    opts = merge_tb("force", opts, {
       init_options = {
         preferences = {
           disableSuggestions = true,
