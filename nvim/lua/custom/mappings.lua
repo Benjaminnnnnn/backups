@@ -200,6 +200,15 @@ M.lspconfig = {
   },
 }
 
+M.markdown = {
+  n = {
+    ["<C-k>v"] = {
+      "<cmd> MarkdownPreview <CR>",
+      "Markdown Preview",
+    },
+  },
+}
+
 M.harpoon = {
   n = {
     ["<leader>ha"] = {
