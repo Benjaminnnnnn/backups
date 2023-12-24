@@ -35,6 +35,15 @@ M.general = {
   },
 }
 
+M.lazy = {
+  n = {
+    ["<leader>lz"] = {
+      "<cmd> Lazy <CR>",
+      "Open Lazy UI",
+    },
+  },
+}
+
 M.dap = {
   plugin = true,
   n = {
