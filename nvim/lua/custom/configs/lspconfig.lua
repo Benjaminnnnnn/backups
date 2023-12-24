@@ -65,7 +65,7 @@ for _, lsp in ipairs(servers) do
       },
     })
   elseif lsp == "tailwindcss" then
-    print(vim.inspect(opts))
+    -- print(vim.inspect(opts))
     opts = merge_tb(opts, {
       settings = {
         tailwindCSS = {
@@ -81,16 +81,17 @@ for _, lsp in ipairs(servers) do
     })
   end
 
-  lspconfig[lsp].setup {
-    opts,
-  }
+  print(capabilities)
   -- lspconfig[lsp].setup {
-  --   on_attach = on_attach,
-  --   capabilities = capabilities,
-  --   autotag = {
-  --     enable = true,
-  --   },
+  --   opts,
   -- }
+  lspconfig[lsp].setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    autotag = {
+      enable = true,
+    },
+  }
 end
 
 -- go formatting
