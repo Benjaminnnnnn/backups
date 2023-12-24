@@ -32,6 +32,9 @@ for _, lsp in ipairs(servers) do
   local opts = {
     on_attach = on_attach,
     capabilities = capabilities,
+    autotag = {
+      enable = true,
+    },
   }
   -- add extra config for individual lsp
   if lsp == "tsserver" then
@@ -79,12 +82,15 @@ for _, lsp in ipairs(servers) do
   end
 
   lspconfig[lsp].setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-    autotag = {
-      enable = true,
-    },
+    opts,
   }
+  -- lspconfig[lsp].setup {
+  --   on_attach = on_attach,
+  --   capabilities = capabilities,
+  --   autotag = {
+  --     enable = true,
+  --   },
+  -- }
 end
 
 -- go formatting
