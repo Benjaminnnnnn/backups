@@ -87,7 +87,6 @@ for _, lsp in ipairs(servers) do
         },
       },
     })
-    print(vim.inspect(opts))
   end
 
   lspconfig[lsp].setup {
