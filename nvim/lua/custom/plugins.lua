@@ -179,6 +179,13 @@ local plugins = {
   },
 
   { "nvim-pack/nvim-spectre" },
+
+  {
+    "nvim-telescope/telescope.nvim",
+    opts = function()
+      return require "custom.configs.telescope"
+    end,
+  },
 }
 
 return plugins
