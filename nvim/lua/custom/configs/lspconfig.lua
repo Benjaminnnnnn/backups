@@ -66,7 +66,7 @@ for _, lsp in ipairs(servers) do
         experimental = {
           classRegex = {
             {
-              ".*Styles.* =([^;]*);",
+              ".*Styles.*=([^;]*);",
               ".*Classes \\=([^;]*);",
               ".*Variants \\=([^;]*);",
             },
