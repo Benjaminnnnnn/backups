@@ -76,9 +76,7 @@ for _, lsp in ipairs(servers) do
     --   })
   end
 
-  lspconfig[lsp].setup {
-    opts,
-  }
+  lspconfig[lsp].setup(opts)
   -- lspconfig[lsp].setup {
   --   on_attach = on_attach,
   --   capabilities = capabilities,
