@@ -81,9 +81,7 @@ for _, lsp in ipairs(servers) do
           validate = true,
           experimental = {
             classRegex = {
-              {
-                "Styles =([^;]*);",
-              },
+              "Styles =([^;]*);",
             },
           },
         },
