@@ -70,6 +70,8 @@ for _, lsp in ipairs(servers) do
             classRegex = {
               -- ".*Styles.*=([^;]*);",
               "Styles \\=([^;]*);",
+              "Classes \\=([^;]*);",
+              "Variants \\=([^;]*);",
             },
           },
         },
