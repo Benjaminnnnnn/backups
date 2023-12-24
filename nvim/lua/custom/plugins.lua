@@ -165,6 +165,7 @@ local plugins = {
     init = function()
       require "todo-comments"
     end,
+    opts = {},
     config = function()
       require("todo-comments").setup {}
     end,
