@@ -55,7 +55,7 @@ for _, lsp in ipairs(servers) do
       },
     })
   elseif lsp == "gopls" then
-    opts = merge_tb(opts, {
+    opts = merge_tb("force", opts, {
       settings = {
         gopls = {
           analyses = {
