@@ -186,9 +186,6 @@ local plugins = {
         test = { "Identifier", "#FF00FF" },
       },
     },
-    config = function(_, opts)
-      require("todo-comments").setup { opts }
-    end,
   },
 
   {
