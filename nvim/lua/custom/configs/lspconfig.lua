@@ -24,7 +24,7 @@ local function organize_imports()
 end
 
 local merge_tb = function(left, right)
-  return vim.tbl_deep_extend("force", vim.deepcopy(left), right)
+  return vim.tbl_deep_extend("force", vim.deepcopy(left), vim.deepcopy(right))
 end
 
 -- configure all lsps
