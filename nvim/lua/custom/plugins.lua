@@ -210,7 +210,7 @@ local plugins = {
       return require "custom.configs.aerial"
     end,
     keys = {
-      { "<leader>a", "<cmd> AerialToggle! <cr>", desc = "Aerial (Symbols)" },
+      { "<leader>a", "<cmd> AerialToggle <cr>", desc = "Aerial (Symbols)" },
     },
   },
 }
