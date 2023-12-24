@@ -36,6 +36,7 @@ for _, lsp in ipairs(servers) do
       enable = true,
     },
   }
+
   -- add extra config for individual lsp
   if lsp == "tsserver" then
     opts = merge_tb(opts, {
