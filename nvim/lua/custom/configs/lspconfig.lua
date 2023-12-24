@@ -78,6 +78,7 @@ for _, lsp in ipairs(servers) do
         },
       },
     })
+    print(opts)
   end
 
   lspconfig[lsp].setup {
