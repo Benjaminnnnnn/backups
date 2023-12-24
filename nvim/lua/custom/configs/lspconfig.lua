@@ -63,12 +63,14 @@ for _, lsp in ipairs(servers) do
   elseif lsp == "tailwindcss" then
     opts = merge_tb(opts, {
       settings = {
-        experimental = {
-          classRegex = {
-            {
-              ".*Styles.*=([^;]*);",
-              ".*Classes \\=([^;]*);",
-              ".*Variants \\=([^;]*);",
+        tailwindCSS = {
+          experimental = {
+            classRegex = {
+              {
+                ".*Styles.*=([^;]*);",
+                ".*Classes \\=([^;]*);",
+                ".*Variants \\=([^;]*);",
+              },
             },
           },
         },
