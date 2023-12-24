@@ -132,7 +132,13 @@ M.spectre = {
 
 M.trouble = {
   n = {
-    ["<leader>bt"] = {
+    -- ["<leader>bt"] = {
+    --   function()
+    --     require("trouble").toggle()
+    --   end,
+    --   "Toggle Trouble",
+    -- },
+    ["<C-`>"] = {
       function()
         require("trouble").toggle()
       end,
