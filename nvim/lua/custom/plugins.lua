@@ -214,6 +214,10 @@ local plugins = {
       { "<leader>a", "<cmd> AerialToggle <cr>", desc = "Aerial (Symbols)" },
     },
   },
+
+  {
+    "rafamadriz/friendly-snippets",
+  },
 }
 
 return plugins
