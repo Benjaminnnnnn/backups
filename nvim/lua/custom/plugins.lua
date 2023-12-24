@@ -197,6 +197,16 @@ local plugins = {
       return require "custom.configs.nvimtree"
     end,
   },
+
+  {
+    "stevearc/aerial.nvim",
+    opts = {},
+    -- Optional dependencies
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons",
+    },
+  },
 }
 
 return plugins
