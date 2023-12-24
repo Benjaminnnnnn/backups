@@ -162,6 +162,10 @@ local plugins = {
   {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
+    event = "VeryLazy",
+    init = function()
+      require "todo-comments"
+    end,
     opts = function()
       return require "custom.configs.todo-comments"
     end,
