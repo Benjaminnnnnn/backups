@@ -189,6 +189,9 @@ local plugins = {
 
   {
     "nvim-tree/nvim-tree.lua",
+    opts = function()
+      return require "custom.configs.nvimtree"
+    end,
   },
 }
 
