@@ -52,8 +52,6 @@ for _, lsp in ipairs(servers) do
         },
       },
     })
-
-    print(vim.inspect(opts))
   elseif lsp == "gopls" then
     opts = merge_tb(opts, {
       settings = {
