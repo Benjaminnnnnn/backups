@@ -62,18 +62,18 @@ for _, lsp in ipairs(servers) do
         },
       },
     })
-    -- elseif lsp == "tailwindcss" then
-    --   opts = merge_tb(opts, {
-    --     settings = {
-    --       tailwindCSS = {
-    --         experimental = {
-    --           classRegex = {
-    --             "Styles =([^;]*);",
-    --           },
-    --         },
-    --       },
-    --     },
-    --   })
+  elseif lsp == "tailwindcss" then
+    opts = merge_tb("force", opts, {
+      settings = {
+        tailwindCSS = {
+          experimental = {
+            classRegex = {
+              "Styles =([^;]*);",
+            },
+          },
+        },
+      },
+    })
   end
 
   lspconfig[lsp].setup(opts)
