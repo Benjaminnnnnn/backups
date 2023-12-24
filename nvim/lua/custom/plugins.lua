@@ -206,7 +206,9 @@ local plugins = {
       "nvim-treesitter/nvim-treesitter",
       "nvim-tree/nvim-web-devicons",
     },
-    opts = {},
+    opts = function()
+      return require "custom.configs.aerial"
+    end,
     keys = {
       { "<leader>a", "<cmd> AerialToggle! <cr>", desc = "Aerial (Symbols)" },
     },
