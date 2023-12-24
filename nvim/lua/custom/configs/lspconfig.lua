@@ -1,6 +1,6 @@
-local configs = require "plugins.configs.lspconfig"
-local on_attach = configs.on_attach
-local capabilities = configs.capabilities
+local base = require "plugins.configs.lspconfig"
+local on_attach = base.on_attach
+local capabilities = base.capabilities
 
 local lspconfig = require "lspconfig"
 local servers = {
@@ -13,6 +13,7 @@ local servers = {
   "tailwindcss",
   "pyright",
   "bashls",
+  "eslint",
 }
 
 local function organize_imports()
