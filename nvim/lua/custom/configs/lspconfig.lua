@@ -30,8 +30,8 @@ end
 -- configure all lsps
 for _, lsp in ipairs(servers) do
   local opts = {
-    -- on_attach = on_attach,
-    -- capabilities = capabilities,
+    on_attach = on_attach,
+    capabilities = capabilities,
     -- autotag = {
     --   enable = true,
     -- },
