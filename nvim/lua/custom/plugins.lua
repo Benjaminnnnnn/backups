@@ -186,6 +186,10 @@ local plugins = {
       return require "custom.configs.telescope"
     end,
   },
+
+  {
+    "nvim-tree/nvim-tree.lua",
+  },
 }
 
 return plugins
