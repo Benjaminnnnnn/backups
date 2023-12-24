@@ -69,7 +69,6 @@ for _, lsp in ipairs(servers) do
               ".*Styles \\=([^;]*);",
               ".*Classes \\=([^;]*);",
               ".*Variants \\=([^;]*);",
-              '"([^"]*)"',
             },
           },
         },
