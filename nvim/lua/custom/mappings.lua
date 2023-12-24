@@ -183,7 +183,7 @@ M.trouble = {
 M.aerial = {
   n = {
     ["<leader>a"] = {
-      "<cmd>AerialToggle!<CR>",
+      "<cmd>require('aerial').AerialToggle!<CR>",
       "Toggle Aerial (symbols)",
     },
   },
