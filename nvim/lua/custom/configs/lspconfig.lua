@@ -64,11 +64,13 @@ for _, lsp in ipairs(servers) do
     opts = merge_tb(opts, {
       settings = {
         experimental = {
-          classRegex =     ["Styles \\=([^;]*);", "\"([^\"]*)\""],
-    ["Classes \\=([^;]*);", "\"([^\"]*)\""],
-    ["Variants \\=([^;]*);", "\"([^\"]*)\""]
-        }
-      }
+          classRegex = {
+            { "Styles \\=([^;]*);", '"([^"]*)"' },
+            { "Classes \\=([^;]*);", '"([^"]*)"' },
+            { "Variants \\=([^;]*);", '"([^"]*)"' },
+          },
+        },
+      },
     })
   end
 
