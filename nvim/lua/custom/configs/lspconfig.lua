@@ -65,7 +65,6 @@ for _, lsp in ipairs(servers) do
       },
     })
   elseif lsp == "tailwindcss" then
-    -- print(vim.inspect(opts))
     opts = merge_tb(opts, {
       settings = {
         tailwindCSS = {
@@ -81,7 +80,6 @@ for _, lsp in ipairs(servers) do
     })
   end
 
-  print(vim.inspect(capabilities))
   -- lspconfig[lsp].setup {
   --   opts,
   -- }
