@@ -49,7 +49,7 @@ local plugins = {
         "typescript-language-server",
         "bash-language-server",
         "shellcheck",
-        "vscode-eslint-language-server",
+        "eslint-lsp",
 
         -- formatter
         "prettier",
