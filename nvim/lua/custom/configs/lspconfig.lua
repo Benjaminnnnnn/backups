@@ -23,10 +23,6 @@ local function organize_imports()
   vim.lsp.buf.execute_command(params)
 end
 
--- local merge_tb = function(left, right)
---   return vim.tbl_deep_extend("force", left, right)
--- end
-
 local merge_tb = vim.tbl_deep_extend
 
 -- configure all lsps
