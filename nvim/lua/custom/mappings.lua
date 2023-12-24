@@ -138,7 +138,7 @@ M.trouble = {
     --   end,
     --   "Toggle Trouble",
     -- },
-    ["<C-`>"] = {
+    ["<C-96>"] = {
       function()
         require("trouble").toggle()
       end,
