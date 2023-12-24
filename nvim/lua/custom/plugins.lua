@@ -217,6 +217,10 @@ local plugins = {
 
   {
     "rafamadriz/friendly-snippets",
+    config = function(_, opts)
+      require("plugins.configs.others").luasnip(opts)
+      require "custom.configs.friendly-snippets"
+    end,
   },
 }
 
