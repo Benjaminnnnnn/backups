@@ -202,7 +202,7 @@ M.lspconfig = {
 
 M.markdown = {
   n = {
-    ["<C-k>v"] = {
+    ["<leader>mp"] = {
       "<cmd> MarkdownPreview <CR>",
       "Markdown Preview",
     },
