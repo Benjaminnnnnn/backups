@@ -68,7 +68,7 @@ for _, lsp in ipairs(servers) do
         tailwindCSS = {
           experimental = {
             classRegex = {
-              "Styles =([^;]*);",
+              ".*Styles.*=([^;]*);",
             },
           },
         },
