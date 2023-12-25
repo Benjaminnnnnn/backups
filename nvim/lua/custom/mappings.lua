@@ -209,6 +209,15 @@ M.markdown = {
   },
 }
 
+M.noice = {
+  n = {
+    ["<leader>mt"] = {
+      "<cmd> NoiceTelescope <CR>",
+      "Noice messages in Telescope",
+    },
+  },
+}
+
 M.harpoon = {
   n = {
     ["<leader>ha"] = {
