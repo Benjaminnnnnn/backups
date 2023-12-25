@@ -21,7 +21,11 @@ local plugins = {
       },
       auto_install = true,
     },
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter-context",
+    },
   },
+
   {
     "neovim/nvim-lspconfig",
 
@@ -36,6 +40,7 @@ local plugins = {
       require "custom.configs.lspconfig"
     end,
   },
+
   {
     "williamboman/mason.nvim",
     opts = {
