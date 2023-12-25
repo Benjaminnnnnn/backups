@@ -181,8 +181,9 @@ local plugins = {
   {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    init = function()
-      require "trouble"
+    config = function()
+      dofile(vim.g.base46_cache .. "trouble")
+      require("trouble").setup()
     end,
   },
 
