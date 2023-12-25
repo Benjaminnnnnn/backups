@@ -293,10 +293,6 @@ local plugins = {
   },
 
   {
-    event,
-  },
-
-  {
     "folke/noice.nvim",
     event = "VeryLazy",
     opts = function()
