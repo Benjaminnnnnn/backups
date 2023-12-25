@@ -38,6 +38,11 @@ local plugins = {
       {
 
         "folke/lsp-colors.nvim",
+        config = function()
+          require("lsp-colors").setup {
+            DiagnosticInfo = "#db4b4b",
+          }
+        end,
       },
     },
     config = function()
