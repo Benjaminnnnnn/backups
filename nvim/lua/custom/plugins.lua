@@ -274,6 +274,13 @@ local plugins = {
   },
 
   {
+       "chentoast/marks.nvim",
+    init = function ()
+     require('custom.configs.marks') 
+    end
+  }
+
+  {
     "folke/noice.nvim",
     event = "VeryLazy",
     opts = function()
