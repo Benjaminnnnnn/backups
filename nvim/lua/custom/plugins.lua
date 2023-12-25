@@ -28,7 +28,6 @@ local plugins = {
 
   {
     "neovim/nvim-lspconfig",
-
     dependencies = {
       {
         "nvimtools/none-ls.nvim",
