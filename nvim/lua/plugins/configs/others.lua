@@ -58,7 +58,7 @@ M.gitsigns = {
     changedelete = { text = "~" },
     untracked = { text = "│" },
   },
-  linehl = true,
+  linehl = false,
   current_line_blame = true,
   current_line_blame_opts = {
     delay = 500,
