@@ -278,6 +278,7 @@ local plugins = {
     init = function()
       require "custom.configs.marks"
     end,
+    event = "VeryLazy",
   },
 
   {
