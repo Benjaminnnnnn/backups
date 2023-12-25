@@ -30,10 +30,16 @@ local plugins = {
     "neovim/nvim-lspconfig",
 
     dependencies = {
-      "nvimtools/none-ls.nvim",
-      config = function()
-        require "custom.configs.none-ls"
-      end,
+      {
+        "nvimtools/none-ls.nvim",
+        config = function()
+          require "custom.configs.none-ls"
+        end,
+      },
+      {
+
+        "folke/lsp-colors.nvim",
+      },
     },
     config = function()
       require "plugins.configs.lspconfig"
@@ -284,6 +290,10 @@ local plugins = {
       require "custom.configs.marks"
     end,
     event = "VeryLazy",
+  },
+
+  {
+    event,
   },
 
   {
