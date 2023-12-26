@@ -81,6 +81,7 @@ local plugins = {
       user_default_options = {
         rgb_fn = true, -- CSS rgb() and rgba() functions
         hsl_fn = true, -- CSS hsl() and hsla() functions
+        tailwind = true,
       },
     },
     config = function(_, opts)
