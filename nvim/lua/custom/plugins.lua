@@ -76,11 +76,14 @@ local plugins = {
     init = function()
       require("core.utils").lazy_load "nvim-colorizer.lua"
     end,
-    config = function(_, opts)
-      require("colorizer").setup(opts, {
+    opts = {
+      css = {
         rgb_fn = true, -- CSS rgb() and rgba() functions
         hsl_fn = true, -- CSS hsl() and hsla() functions
-      })
+      },
+    },
+    config = function(_, opts)
+      require("colorizer").setup(opts)
 
       -- execute colorizer as soon as possible
       vim.defer_fn(function()
