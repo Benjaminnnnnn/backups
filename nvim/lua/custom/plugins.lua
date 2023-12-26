@@ -72,23 +72,23 @@ local plugins = {
     },
   },
 
-  {
-    "NvChad/nvim-colorizer.lua",
-    init = function()
-      require("core.utils").lazy_load "nvim-colorizer.lua"
-    end,
-    opts = {
-      css = { rgb_fn = true }, -- Enable parsing rgb(...) functions in css.
-    },
-    config = function(_, opts)
-      require("colorizer").setup(opts)
-
-      -- execute colorizer as soon as possible
-      vim.defer_fn(function()
-        require("colorizer").attach_to_buffer(0)
-      end, 0)
-    end,
-  },
+  -- {
+  --   "NvChad/nvim-colorizer.lua",
+  --   init = function()
+  --     require("core.utils").lazy_load "nvim-colorizer.lua"
+  --   end,
+  --   opts = {
+  --     css = { rgb_fn = true }, -- Enable parsing rgb(...) functions in css.
+  --   },
+  --   config = function(_, opts)
+  --     require("colorizer").setup(opts)
+  --
+  --     -- execute colorizer as soon as possible
+  --     vim.defer_fn(function()
+  --       require("colorizer").attach_to_buffer(0)
+  --     end, 0)
+  --   end,
+  -- },
 
   {
     "rcarriga/nvim-dap-ui",
