@@ -103,15 +103,15 @@ local plugins = {
     end,
   },
 
-  {
-    "roobert/tailwindcss-colorizer-cmp.nvim",
-    -- optionally, override the default options:
-    config = function()
-      require("tailwindcss-colorizer-cmp").setup {
-        color_square_width = 2,
-      }
-    end,
-  },
+  --   {
+  --   "roobert/tailwindcss-colorizer-cmp.nvim",
+  --   -- optionally, override the default options:
+  --   config = function()
+  --     require("tailwindcss-colorizer-cmp").setup({
+  --       color_square_width = 2,
+  --     })
+  --   end
+  -- },
 
   {
     "rcarriga/nvim-dap-ui",
@@ -309,9 +309,6 @@ local plugins = {
       return require "plugins.configs.cmp"
     end,
     config = function(_, opts)
-      require("cmp").config.formatting = {
-        format = require("tailwindcss-colorizer-cmp").formatter,
-      }
       require("cmp").setup(opts)
     end,
   },
