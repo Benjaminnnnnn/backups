@@ -107,6 +107,7 @@ local plugins = {
 
     "roobert/tailwindcss-colorizer-cmp.nvim",
     init = function()
+      require("tailwindcss-colorizer-cmp").setup()
       require("cmp").config.formatting = {
         format = require("tailwindcss-colorizer-cmp").formatter,
       }
