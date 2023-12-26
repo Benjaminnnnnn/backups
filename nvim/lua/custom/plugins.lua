@@ -94,15 +94,15 @@ local plugins = {
     end,
   },
 
-  {
-    "mrshmllow/document-color.nvim",
-    init = function()
-      require("document-color").setup {
-        -- Default options
-        mode = "background", -- "background" | "foreground" | "single"
-      }
-    end,
-  },
+  -- {
+  --   "mrshmllow/document-color.nvim",
+  --   init = function()
+  --     require("document-color").setup {
+  --       -- Default options
+  --       mode = "background", -- "background" | "foreground" | "single"
+  --     }
+  --   end,
+  -- },
 
   --   {
   --   "roobert/tailwindcss-colorizer-cmp.nvim",
