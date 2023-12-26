@@ -95,7 +95,7 @@ local plugins = {
 
   {
     "mrshmllow/document-color.nvim",
-    config = function()
+    init = function()
       require("document-color").setup {
         -- Default options
         mode = "background", -- "background" | "foreground" | "single"
