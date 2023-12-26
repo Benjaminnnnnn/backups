@@ -35,8 +35,10 @@ local default_plugins = {
       require("core.utils").lazy_load "nvim-colorizer.lua"
     end,
     opts = {
-      rgb_fn = true, -- CSS rgb() and rgba() functions
-      hsl_fn = true, -- CSS hsl() and hsla() functions
+      css = {
+        rgb_fn = true, -- CSS rgb() and rgba() functions
+        hsl_fn = true, -- CSS hsl() and hsla() functions
+      },
     },
     config = function(_, opts)
       require("colorizer").setup(opts)
