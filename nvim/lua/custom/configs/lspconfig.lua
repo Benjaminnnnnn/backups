@@ -2,6 +2,11 @@ local base = require "plugins.configs.lspconfig"
 local on_attach = base.on_attach
 local capabilities = base.capabilities
 
+-- Document colorizer (for tailwindcss)
+capabilities.textDocument.colorProvider = {
+  dynamicRegistration = true,
+}
+
 local lspconfig = require "lspconfig"
 local servers = {
   "html",
