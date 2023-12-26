@@ -56,6 +56,7 @@ local plugins = {
         "bash-language-server",
         "shellcheck",
         "eslint-lsp",
+        "vscode-langservers-extracted"
 
         -- formatter
         "prettier",
