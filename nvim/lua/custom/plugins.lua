@@ -328,13 +328,7 @@ local plugins = {
   {
     "chentoast/marks.nvim",
     init = function()
-      require("custom.configs.marks").setup {
-        excluded_filetypes = {
-          "TelescopePrompt",
-          "cmp_menu",
-          "cmp_docs",
-        },
-      }
+      require "custom.configs.marks"
     end,
     event = "VeryLazy",
   },
