@@ -57,7 +57,6 @@ local plugins = {
         "shellcheck",
         "eslint-lsp",
         "css-lsp",
-        "lemminx",
 
         -- formatter
         "prettier",
