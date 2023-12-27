@@ -325,7 +325,7 @@ local plugins = {
     ft = { "markdown" },
   },
 
-  {
+  -- {
   --   "chentoast/marks.nvim",
   --   init = function()
   --     require "custom.configs.marks"
