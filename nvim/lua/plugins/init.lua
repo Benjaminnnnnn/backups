@@ -71,7 +71,7 @@ local default_plugins = {
         require("colorizer").attach_to_buffer(0)
       end, 0)
     end,
-  }
+  },
 
   {
     "nvim-tree/nvim-web-devicons",
