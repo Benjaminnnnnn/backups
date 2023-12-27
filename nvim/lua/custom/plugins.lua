@@ -79,7 +79,10 @@ local plugins = {
     end,
     opts = {
       -- file_types = { "!cmp_menu", "!cmp_docs" },
-      file_types = { cmp_menu = { always_update = true }, cmp_docs = { always_update = true } },
+      file_types = {
+        cmp_menu = { always_update = true },
+        cmp_docs = { always_update = true },
+      },
       user_default_options = {
         -- rgb_fn = true, -- CSS rgb() and rgba() functions
         -- hsl_fn = true, -- CSS hsl() and hsla() functions
