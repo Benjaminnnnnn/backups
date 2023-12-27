@@ -78,7 +78,7 @@ local plugins = {
       require("core.utils").lazy_load "nvim-colorizer.lua"
     end,
     opts = {
-      file_types = { "!cmp_menu" },
+      file_types = { "!cmp_menu", "!cmp_docs" },
       user_default_options = {
         -- rgb_fn = true, -- CSS rgb() and rgba() functions
         -- hsl_fn = true, -- CSS hsl() and hsla() functions
