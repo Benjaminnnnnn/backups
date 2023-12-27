@@ -14,6 +14,7 @@ local servers = {
   "pyright",
   "bashls",
   "eslint",
+  "lemminx",
 }
 
 local function organize_imports()
