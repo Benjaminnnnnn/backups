@@ -325,13 +325,19 @@ local plugins = {
     ft = { "markdown" },
   },
 
-  -- {
-  --   "chentoast/marks.nvim",
-  --   init = function()
-  --     require "custom.configs.marks"
-  --   end,
-  --   event = "VeryLazy",
-  -- },
+  {
+    "chentoast/marks.nvim",
+    init = function()
+      require("custom.configs.marks").setup {
+        excluded_filetypes = {
+          "TelescopePrompt",
+          "cmp_menu",
+          "cmp_docs",
+        },
+      }
+    end,
+    event = "VeryLazy",
+  },
 
   {
     "folke/noice.nvim",
