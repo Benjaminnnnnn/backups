@@ -3,7 +3,7 @@ local M = {}
 
 M.ui = {
   theme = "onedark",
-  telescope = { style = "borderless" }, -- borderless / bordered
+  telescope = { style = "bordered" }, -- borderless / bordered
 }
 M.plugins = "custom.plugins"
 M.mappings = require "custom.mappings"
