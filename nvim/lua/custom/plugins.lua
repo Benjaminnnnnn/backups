@@ -72,35 +72,35 @@ local plugins = {
     },
   },
 
-  -- {
-  --   "NvChad/nvim-colorizer.lua",
-  --   init = function()
-  --     require("core.utils").lazy_load "nvim-colorizer.lua"
-  --   end,
-  --   opts = {
-  --     file_types = { "*", "!cmp_menu", "!cmp_docs" },
-  --     -- file_types = {
-  --     --   "*",
-  --     --   cmp_menu = { always_update = true },
-  --     --   cmp_docs = { always_update = true },
-  --     -- },
-  --     user_default_options = {
-  --       -- rgb_fn = true, -- CSS rgb() and rgba() functions
-  --       -- hsl_fn = true, -- CSS hsl() and hsla() functions
-  --       css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB,
-  --       css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
-  --       tailwind = "both",
-  --     },
-  --   },
-  --   config = function(_, opts)
-  --     require("colorizer").setup(opts)
-  --
-  --     -- execute colorizer as soon as possible
-  --     vim.defer_fn(function()
-  --       require("colorizer").attach_to_buffer(0)
-  --     end, 0)
-  --   end,
-  -- },
+  {
+    "NvChad/nvim-colorizer.lua",
+    init = function()
+      require("core.utils").lazy_load "nvim-colorizer.lua"
+    end,
+    opts = {
+      file_types = { "*", "!cmp_menu", "!cmp_docs" },
+      -- file_types = {
+      --   "*",
+      --   cmp_menu = { always_update = true },
+      --   cmp_docs = { always_update = true },
+      -- },
+      user_default_options = {
+        -- rgb_fn = true, -- CSS rgb() and rgba() functions
+        -- hsl_fn = true, -- CSS hsl() and hsla() functions
+        css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB,
+        css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
+        tailwind = "both",
+      },
+    },
+    config = function(_, opts)
+      require("colorizer").setup(opts)
+
+      -- execute colorizer as soon as possible
+      vim.defer_fn(function()
+        require("colorizer").attach_to_buffer(0)
+      end, 0)
+    end,
+  },
 
   {
     "roobert/tailwindcss-colorizer-cmp.nvim",
