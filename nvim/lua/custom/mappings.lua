@@ -140,7 +140,7 @@ M.lazygit = {
 
 M.spectre = {
   n = {
-    ["<leader>s"] = {
+    ["<leader>sr"] = {
       "<cmd> lua require('spectre').toggle() <CR>",
       "Toggle Spectre",
     },
