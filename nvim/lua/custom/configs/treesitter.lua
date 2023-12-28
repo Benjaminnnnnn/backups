@@ -6,6 +6,7 @@ local opts = {
     "go",
     "rust",
     "python",
+    "vimdoc",
 
     -- web dev
     "html",
