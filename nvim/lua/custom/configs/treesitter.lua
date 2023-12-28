@@ -39,8 +39,7 @@ local opts = {
         ["if"] = "@function.inner",
         ["ac"] = "@class.outer",
         ["ic"] = "@class.inner",
-        ["a/"] = { query = "@comment.outer", desc = "Select outer part of a comment block" },
-        ["i/"] = { query = "@comment.inner", desc = "Select inner part of a comment block" },
+        ["a/"] = { query = "@comment.outer", desc = "Select a comment inline/block" },
 
         ["as"] = { query = "@scope", query_group = "locals", desc = "Select language scope" },
       },
