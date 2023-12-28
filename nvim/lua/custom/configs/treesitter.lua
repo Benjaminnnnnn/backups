@@ -41,6 +41,15 @@ local opts = {
         ["ic"] = "@class.inner",
       },
     },
+    swap = {
+      enable = true,
+      swap_next = {
+        ["<leader>sn"] = "@parameter.inner",
+      },
+      swap_previous = {
+        ["<leader>sp"] = "@parameter.inner",
+      },
+    },
   },
 
   highlight = {
