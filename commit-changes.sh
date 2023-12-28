@@ -6,7 +6,7 @@ cp $HOME/.tmux.conf ./tmux/
 
 # nvim config
 cp -rf $HOME/.config/nvim/* ./nvim/
-rm -rf ./nvim/.git .nvim/.github
+rm -rf ./nvim/.git ./nvim/.github ./nvim/.gitignore
 
 # zsh config
 cp $HOME/.zshrc ./zsh/
