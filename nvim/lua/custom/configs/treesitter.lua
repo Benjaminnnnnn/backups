@@ -39,6 +39,8 @@ local opts = {
         ["if"] = "@function.inner",
         ["ac"] = "@class.outer",
         ["ic"] = "@class.inner",
+
+        ["as"] = { query = "@scope", query_group = "locals", desc = "Select language scope" },
       },
     },
     swap = {
