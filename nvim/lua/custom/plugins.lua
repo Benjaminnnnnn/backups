@@ -2,9 +2,27 @@ local plugins = {
 
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = function()
-      return require "custom.configs.nvim-treesitter"
-    end,
+    -- opts = function()
+    --   return require "custom.configs.nvim-treesitter"
+    -- end,
+    opts = {
+      ensure_installed = {
+        -- defaults
+        "vim",
+        "lua",
+        "go",
+        "rust",
+        "python",
+
+        -- web dev
+        "html",
+        "css",
+        "javascript",
+        "typescript",
+        "tsx",
+        "json",
+      },
+    },
     dependencies = {
       "nvim-treesitter/nvim-treesitter-context",
     },
