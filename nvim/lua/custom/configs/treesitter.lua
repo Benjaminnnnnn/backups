@@ -29,6 +29,7 @@ local opts = {
 
   textobjects = {
     select = {
+      disable = {},
       loaded = true,
       enable = true,
       lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
