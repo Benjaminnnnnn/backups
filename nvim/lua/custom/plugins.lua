@@ -22,6 +22,7 @@ local plugins = {
         "tsx",
         "json",
       },
+      auto_install = true,
     },
     dependencies = {
       "nvim-treesitter/nvim-treesitter-context",
