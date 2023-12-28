@@ -2,44 +2,45 @@ local plugins = {
 
   {
     "nvim-treesitter/nvim-treesitter",
-    -- opts = function()
-    --   return require "custom.configs.nvim-treesitter"
-    -- end,
-    opts = {
-      ensure_installed = {
-        -- defaults
-        "vim",
-        "lua",
-        "go",
-        "rust",
-        "python",
+    opts = function()
+      return require "custom.configs.nvim-treesitter"
+    end,
 
-        -- web dev
-        "html",
-        "css",
-        "javascript",
-        "typescript",
-        "tsx",
-        "json",
-      },
-      auto_install = true,
-
-      textobjects = {
-        select = {
-          enable = true,
-          lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
-          keymaps = {
-            -- You can use the capture groups defined in textobjects.scm
-            ["aa"] = "@parameter.outer",
-            ["ia"] = "@parameter.inner",
-            ["af"] = "@function.outer",
-            ["if"] = "@function.inner",
-            ["ac"] = "@class.outer",
-            ["ic"] = "@class.inner",
-          },
-        },
-      },
-    },
+    -- opts = {
+    --   ensure_installed = {
+    --     -- defaults
+    --     "vim",
+    --     "lua",
+    --     "go",
+    --     "rust",
+    --     "python",
+    --
+    --     -- web dev
+    --     "html",
+    --     "css",
+    --     "javascript",
+    --     "typescript",
+    --     "tsx",
+    --     "json",
+    --   },
+    --   auto_install = true,
+    --
+    --   textobjects = {
+    --     select = {
+    --       enable = true,
+    --       lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
+    --       keymaps = {
+    --         -- You can use the capture groups defined in textobjects.scm
+    --         ["aa"] = "@parameter.outer",
+    --         ["ia"] = "@parameter.inner",
+    --         ["af"] = "@function.outer",
+    --         ["if"] = "@function.inner",
+    --         ["ac"] = "@class.outer",
+    --         ["ic"] = "@class.inner",
+    --       },
+    --     },
+    --   },
+    -- },
     dependencies = {
       "nvim-treesitter/nvim-treesitter-context",
     },
