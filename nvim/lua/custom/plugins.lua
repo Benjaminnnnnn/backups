@@ -3,7 +3,7 @@ local plugins = {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = function()
-      return require "custom.configs.nvim-treesitter"
+      return require "custom.configs.treesitter"
     end,
 
     -- opts = {
