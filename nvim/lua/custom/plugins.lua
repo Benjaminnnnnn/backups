@@ -201,8 +201,6 @@ local plugins = {
         leap.opts[k] = v
       end
       leap.add_default_mappings(true)
-      vim.keymap.del({ "x", "o" }, "x")
-      vim.keymap.del({ "x", "o" }, "X")
       leap.add_repeat_mappings(";", ",", {
         -- False by default. If set to true, the keys will work like the
         -- native semicolon/comma, i.e., forward/backward is understood in
@@ -211,6 +209,8 @@ local plugins = {
         -- By default, all modes are included.
         modes = { "n", "x", "o" },
       })
+      vim.keymap.del({ "x", "o" }, "x")
+      vim.keymap.del({ "x", "o" }, "X")
     end,
   },
 
