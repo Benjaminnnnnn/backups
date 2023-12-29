@@ -7,6 +7,7 @@ local opts = {
     "rust",
     "python",
     "vimdoc",
+    "toml",
 
     -- web dev
     "html",
