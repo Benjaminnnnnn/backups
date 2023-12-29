@@ -114,6 +114,7 @@ local plugins = {
       end
     end,
   },
+
   {
     "mfussenegger/nvim-dap",
     config = function()
@@ -121,6 +122,7 @@ local plugins = {
       require("core.utils").load_mappings "dap"
     end,
   },
+
   {
     "mfussenegger/nvim-lint",
     event = "VeryLazy",
@@ -128,17 +130,21 @@ local plugins = {
       require "custom.configs.lint"
     end,
   },
+
   {
     "christoomey/vim-tmux-navigator",
     lazy = false,
   },
+
   {
     "tpope/vim-surround",
     lazy = false,
   },
+  
   {
     "ThePrimeagen/harpoon",
   },
+
   {
     "olexsmir/gopher.nvim",
     ft = "go",
@@ -154,6 +160,7 @@ local plugins = {
     "wakatime/vim-wakatime",
     lazy = false,
   },
+
   {
     "windwp/nvim-ts-autotag",
     ft = {
@@ -179,6 +186,24 @@ local plugins = {
       require("nvim-ts-autotag").setup()
     end,
   },
+
+  {"ggandor/leap.nvim",   enabled = true,
+  keys = {
+    { "s", mode = { "n", "x", "o" }, desc = "Leap forward to" },
+    { "S", mode = { "n", "x", "o" }, desc = "Leap backward to" },
+    { "gs", mode = { "n", "x", "o" }, desc = "Leap from windows" },
+  },
+  config = function(_, opts)
+    local leap = require("leap")
+    for k, v in pairs(opts) do
+      leap.opts[k] = v
+    end
+    leap.add_default_mappings(true)
+    vim.keymap.del({ "x", "o" }, "x")
+    vim.keymap.del({ "x", "o" }, "X")
+  end,
+}},
+
   {
     "kdheepak/lazygit.nvim",
     -- optional for floating window border decoration
