@@ -1,5 +1,7 @@
 local M = {}
 
+M.disabled = {}
+
 M.general = {
   n = {
     ["<leader>tt"] = {
