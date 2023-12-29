@@ -3,6 +3,7 @@
 export PATH=/USR/LOCAL/opt/llvm/bin:/usr/local//Cellar/llvm/16.0.6/bin:$PATH
 export PATH=$PATH:/Users/benjaminzhuang/go/bin
 export PATH=$PATH:~/.bun/bin/
+export PATH=$PATH:/Applications/Alacritty.app/Contents/MacOS/alacritty
 # export PATH=~/anaconda3/bin:$PATH:usr/local/bin:~/.local/bin
 #         export PATH=export TERM=xterm-256color
 export FORTUNE_FILE='/Users/benjaminzhuang/.fortune_file'
