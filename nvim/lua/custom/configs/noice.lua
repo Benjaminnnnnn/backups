@@ -52,6 +52,10 @@ local opts = {
       filter = { event = "notify", find = "No information available" },
       opts = { skip = true },
     },
+    {
+      view = "notify",
+      filter = { event = "msg_showmode" },
+    },
   },
 }
 
