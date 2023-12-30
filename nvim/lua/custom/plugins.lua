@@ -231,6 +231,13 @@ local plugins = {
     ft = { "markdown" },
   },
 
+{
+  "JoosepAlviste/nvim-ts-context-commentstring",
+  lazy = true,
+  opts = {
+    enable_autocmd = false,
+  },
+
   -- debugger
   {
     "mfussenegger/nvim-dap",
