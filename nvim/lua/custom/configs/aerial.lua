@@ -56,7 +56,9 @@ local opts = {
     "Interface",
     "Module",
     "Method",
+    "Object",
     "Struct",
+    "Variable",
   },
 
   highlight_on_hover = true,
