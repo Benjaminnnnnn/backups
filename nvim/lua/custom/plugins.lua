@@ -233,7 +233,7 @@ local plugins = {
 
   {
     "JoosepAlviste/nvim-ts-context-commentstring",
-    lazy = false,
+    ft = { "javascriptreact", "typescriptreact" },
     opts = {
       enable_autocmd = false,
     },
