@@ -49,7 +49,7 @@ local options = {
     },
   },
 
-  extensions_list = { "themes", "terms", "fzf", "aerial" },
+  extensions_list = { "themes", "terms", "fzf" },
   extensions = {
     fzf = {
       fuzzy = true,
