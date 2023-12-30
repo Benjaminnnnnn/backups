@@ -125,6 +125,33 @@ local plugins = {
     end,
   },
 
+  {
+    "chentoast/marks.nvim",
+    init = function()
+      require "custom.configs.marks"
+    end,
+    event = "VeryLazy",
+  },
+
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = function()
+      return require "custom.configs.noice"
+    end,
+    dependencies = {
+      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+      "MunifTanjim/nui.nvim",
+      -- OPTIONAL:
+      --   `nvim-notify` is only needed, if you want to use the notification view.
+      --   If not available, we use `mini` as the fallback
+      "rcarriga/nvim-notify",
+    },
+    config = function(_, opts)
+      require("noice").setup(opts)
+    end,
+  },
+
   -- coding
   {
     "roobert/tailwindcss-colorizer-cmp.nvim",
@@ -139,6 +166,69 @@ local plugins = {
   {
     "tpope/vim-surround",
     lazy = false,
+  },
+
+  {
+    "hrsh7th/nvim-cmp",
+    event = "InsertEnter",
+    dependencies = {
+      {
+        -- snippet plugin
+        "L3MON4D3/LuaSnip",
+        dependencies = "rafamadriz/friendly-snippets",
+        opts = { history = true, updateevents = "TextChanged,TextChangedI" },
+        config = function(_, opts)
+          require("plugins.configs.others").luasnip(opts)
+          require "custom.configs.friendly-snippets"
+        end,
+      },
+
+      -- autopairing of (){}[] etc
+      {
+        "windwp/nvim-autopairs",
+        opts = {
+          fast_wrap = {},
+          disable_filetype = { "TelescopePrompt", "vim" },
+        },
+        config = function(_, opts)
+          require("nvim-autopairs").setup(opts)
+
+          -- setup cmp for autopairs
+          local cmp_autopairs = require "nvim-autopairs.completion.cmp"
+          require("cmp").event:on("confirm_done", cmp_autopairs.on_confirm_done())
+        end,
+      },
+
+      -- cmp sources plugins
+      {
+        "saadparwaiz1/cmp_luasnip",
+        "hrsh7th/cmp-nvim-lua",
+        "hrsh7th/cmp-nvim-lsp",
+        "hrsh7th/cmp-buffer",
+        "hrsh7th/cmp-path",
+      },
+    },
+    opts = function(_, opts)
+      local format_kinds = opts.formatting.format
+      opts.formatting.format = function(entry, item)
+        format_kinds(entry, item)
+        return require("tailwindcss-colorizer-cmp").formatter(entry, item)
+      end
+      return require "plugins.configs.cmp"
+    end,
+    config = function(_, opts)
+      require("cmp").setup(opts)
+    end,
+  },
+
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    build = "cd app && yarn install",
+    init = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+    ft = { "markdown" },
   },
 
   -- debugger
@@ -171,6 +261,13 @@ local plugins = {
   },
 
   -- editor
+  {
+    "nvim-tree/nvim-tree.lua",
+    opts = function()
+      return require "custom.configs.nvimtree"
+    end,
+  },
+
   {
     "ggandor/leap.nvim",
     enabled = true,
@@ -266,103 +363,6 @@ local plugins = {
     },
     opts = function()
       return require "custom.configs.telescope"
-    end,
-  },
-
-  {
-    "nvim-tree/nvim-tree.lua",
-    opts = function()
-      return require "custom.configs.nvimtree"
-    end,
-  },
-
-  {
-    "hrsh7th/nvim-cmp",
-    event = "InsertEnter",
-    dependencies = {
-      {
-        -- snippet plugin
-        "L3MON4D3/LuaSnip",
-        dependencies = "rafamadriz/friendly-snippets",
-        opts = { history = true, updateevents = "TextChanged,TextChangedI" },
-        config = function(_, opts)
-          require("plugins.configs.others").luasnip(opts)
-          require "custom.configs.friendly-snippets"
-        end,
-      },
-
-      -- autopairing of (){}[] etc
-      {
-        "windwp/nvim-autopairs",
-        opts = {
-          fast_wrap = {},
-          disable_filetype = { "TelescopePrompt", "vim" },
-        },
-        config = function(_, opts)
-          require("nvim-autopairs").setup(opts)
-
-          -- setup cmp for autopairs
-          local cmp_autopairs = require "nvim-autopairs.completion.cmp"
-          require("cmp").event:on("confirm_done", cmp_autopairs.on_confirm_done())
-        end,
-      },
-
-      -- cmp sources plugins
-      {
-        "saadparwaiz1/cmp_luasnip",
-        "hrsh7th/cmp-nvim-lua",
-        "hrsh7th/cmp-nvim-lsp",
-        "hrsh7th/cmp-buffer",
-        "hrsh7th/cmp-path",
-      },
-    },
-    opts = function(_, opts)
-      local format_kinds = opts.formatting.format
-      opts.formatting.format = function(entry, item)
-        format_kinds(entry, item)
-        return require("tailwindcss-colorizer-cmp").formatter(entry, item)
-      end
-      return require "plugins.configs.cmp"
-    end,
-    config = function(_, opts)
-      require("cmp").setup(opts)
-    end,
-  },
-
-  {
-    "iamcco/markdown-preview.nvim",
-    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-    build = "cd app && yarn install",
-    init = function()
-      vim.g.mkdp_filetypes = { "markdown" }
-    end,
-    ft = { "markdown" },
-  },
-
-  {
-    "chentoast/marks.nvim",
-    init = function()
-      require "custom.configs.marks"
-    end,
-    event = "VeryLazy",
-  },
-
-  {
-    "folke/noice.nvim",
-    event = "VeryLazy",
-    opts = function()
-      return require "custom.configs.noice"
-    end,
-    dependencies = {
-      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-      "MunifTanjim/nui.nvim",
-      -- OPTIONAL:
-      --   `nvim-notify` is only needed, if you want to use the notification view.
-      --   If not available, we use `mini` as the fallback
-      "rcarriga/nvim-notify",
-    },
-    config = function(_, opts)
-      require("noice").setup(opts)
     end,
   },
 }
