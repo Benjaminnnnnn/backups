@@ -109,10 +109,10 @@ M.telescope = {
       "<cmd> Telescope lsp_definitions <CR>",
       "Go to definition",
     },
-    -- ["<leader>ds"] = {
-    --   "<cmd> Telescope lsp_document_symbols <CR>",
-    --   "List symbols in current buffer",
-    -- },
+    ["<leader>ds"] = {
+      "<cmd> Telescope lsp_document_symbols <CR>",
+      "List symbols in current buffer",
+    },
     ["<leader>ws"] = {
       "<cmd> Telescope lsp_workspace_symbols <CR>",
       "List symbols across workspace",
@@ -220,14 +220,14 @@ M.noice = {
   },
 }
 
-M.symbols_outline = {
-  n = {
-    ["<leader>ds"] = {
-      "<cmd> SymbolsOutline <CR>",
-      "Toggle symbols outline",
-    },
-  },
-}
+-- M.symbols_outline = {
+--   n = {
+--     ["<leader>ds"] = {
+--       "<cmd> SymbolsOutline <CR>",
+--       "Toggle symbols outline",
+--     },
+--   },
+-- }
 
 M.harpoon = {
   n = {
