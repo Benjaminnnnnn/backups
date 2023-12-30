@@ -5,7 +5,7 @@ local lint = null_ls.builtins.diagnostics
 
 local sources = {
   -- formatting.prettierd,
-  formatting.prettier,
+  formatting.prettier.with { extra_filetypes = { "toml" } },
   formatting.stylua,
   formatting.gofumpt,
   formatting.goimports_reviser,
