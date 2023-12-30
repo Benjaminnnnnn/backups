@@ -2,8 +2,8 @@ local opts = {
   backends = { "treesitter", "lsp", "markdown", "man" },
 
   layout = {
-    min_width = { 15, 0.2 },
-    max_width = { 40, 0.2 },
+    min_width = { 15, 0.15 },
+    max_width = { 40, 0.25 },
     default_direction = "prefer_left",
     resize_to_content = true,
     win_opts = {
