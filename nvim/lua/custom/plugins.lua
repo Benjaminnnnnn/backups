@@ -318,21 +318,24 @@ local plugins = {
     keys = {
       { "<leader>a", "<cmd> AerialToggle <cr>", desc = "Aerial (Symbols)" },
     },
+    config = function(_, opts)
+      require("telescope").load_extension "aerial"
+    end,
   },
 
-  {
-    "simrat39/symbols-outline.nvim",
-    opts = function ()
-     return require('custom.configs.symbols-outline') 
-    end,
-    cmd = {
-      "SymbolsOutline"
-    },
-    config = function (_, opts)
-      require("symbols-outline").setup(opts)
-      
-    end
-  },
+  -- {
+  --   "simrat39/symbols-outline.nvim",
+  --   opts = function ()
+  --    return require('custom.configs.symbols-outline')
+  --   end,
+  --   cmd = {
+  --     "SymbolsOutline"
+  --   },
+  --   config = function (_, opts)
+  --     require("symbols-outline").setup(opts)
+  --
+  --   end
+  -- },
 
   -- lint
   {
