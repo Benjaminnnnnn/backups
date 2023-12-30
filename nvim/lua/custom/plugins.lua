@@ -332,7 +332,7 @@ local plugins = {
       require("symbols-outline").setup(opts)
       
     end
-  }
+  },
 
   -- lint
   {
