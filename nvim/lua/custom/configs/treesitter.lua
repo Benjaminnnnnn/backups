@@ -53,7 +53,7 @@ local opts = {
     },
     move = {
       enable = true,
-      set_jumps = true, -- whether to set jumps in the jumplist
+      set_jumps = false, -- whether to set jumps in the jumplist
       goto_next_start = {
         ["]m"] = "@function.outer",
         ["]]"] = { query = "@class.outer", desc = "Next class start" },
