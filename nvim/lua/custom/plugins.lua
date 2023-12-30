@@ -231,22 +231,22 @@ local plugins = {
     ft = { "markdown" },
   },
 
-  {
-    "JoosepAlviste/nvim-ts-context-commentstring",
-    dependencies = {
-
-  {
-    "numToStr/Comment.nvim",
-    opts = {
-      -- configure Comment.nvim to trigger the commentstring updating logic with its pre_hook configuration
-      pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
-    },
-  },
-    },
-    opts = {
-      enable_autocmd = false,
-    },
-  },
+  -- {
+  --   "JoosepAlviste/nvim-ts-context-commentstring",
+  --   dependencies = {
+  --
+  -- {
+  --   "numToStr/Comment.nvim",
+  --   opts = {
+  --     -- configure Comment.nvim to trigger the commentstring updating logic with its pre_hook configuration
+  --     pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+  --   },
+  -- },
+  --   },
+  --   opts = {
+  --     enable_autocmd = false,
+  --   },
+  -- },
 
 
   -- debugger
