@@ -1,5 +1,6 @@
 local plugins = {
 
+  -- treesitter
   {
     "nvim-treesitter/nvim-treesitter",
     opts = function()
@@ -11,6 +12,33 @@ local plugins = {
     },
   },
 
+  {
+    "windwp/nvim-ts-autotag",
+    ft = {
+      "html",
+      "javascript",
+      "typescript",
+      "javascriptreact",
+      "typescriptreact",
+      "svelte",
+      "vue",
+      "tsx",
+      "jsx",
+      "rescript",
+      "xml",
+      "php",
+      "markdown",
+      "astro",
+      "glimmer",
+      "handlebars",
+      "hbs",
+    },
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
+  },
+
+  -- LSP
   {
     "neovim/nvim-lspconfig",
     dependencies = {
@@ -58,6 +86,18 @@ local plugins = {
   },
 
   {
+    "olexsmir/gopher.nvim",
+    ft = "go",
+    config = function(_, opts)
+      require("gopher").setup(opts)
+    end,
+    build = function()
+      vim.cmd [[silent! GoInstallDeps]]
+    end,
+  },
+
+  -- UI
+  {
     "NvChad/nvim-colorizer.lua",
     init = function()
       require("core.utils").lazy_load "nvim-colorizer.lua"
@@ -85,6 +125,7 @@ local plugins = {
     end,
   },
 
+  -- coding
   {
     "roobert/tailwindcss-colorizer-cmp.nvim",
     -- optionally, override the default options:
@@ -92,6 +133,20 @@ local plugins = {
       require("tailwindcss-colorizer-cmp").setup {
         -- color_square_width = 2,
       }
+    end,
+  },
+
+  {
+    "tpope/vim-surround",
+    lazy = false,
+  },
+
+  -- debugger
+  {
+    "mfussenegger/nvim-dap",
+    config = function()
+      require "custom.configs.dap"
+      require("core.utils").load_mappings "dap"
     end,
   },
 
@@ -115,78 +170,7 @@ local plugins = {
     end,
   },
 
-  {
-    "mfussenegger/nvim-dap",
-    config = function()
-      require "custom.configs.dap"
-      require("core.utils").load_mappings "dap"
-    end,
-  },
-
-  {
-    "mfussenegger/nvim-lint",
-    event = "VeryLazy",
-    config = function()
-      require "custom.configs.lint"
-    end,
-  },
-
-  {
-    "christoomey/vim-tmux-navigator",
-    lazy = false,
-  },
-
-  {
-    "tpope/vim-surround",
-    lazy = false,
-  },
-
-  {
-    "ThePrimeagen/harpoon",
-  },
-
-  {
-    "olexsmir/gopher.nvim",
-    ft = "go",
-    config = function(_, opts)
-      require("gopher").setup(opts)
-    end,
-    build = function()
-      vim.cmd [[silent! GoInstallDeps]]
-    end,
-  },
-
-  {
-    "wakatime/vim-wakatime",
-    lazy = false,
-  },
-
-  {
-    "windwp/nvim-ts-autotag",
-    ft = {
-      "html",
-      "javascript",
-      "typescript",
-      "javascriptreact",
-      "typescriptreact",
-      "svelte",
-      "vue",
-      "tsx",
-      "jsx",
-      "rescript",
-      "xml",
-      "php",
-      "markdown",
-      "astro",
-      "glimmer",
-      "handlebars",
-      "hbs",
-    },
-    config = function()
-      require("nvim-ts-autotag").setup()
-    end,
-  },
-
+  -- editor
   {
     "ggandor/leap.nvim",
     enabled = true,
@@ -197,32 +181,6 @@ local plugins = {
     },
     config = function(_, opts)
       require("custom.configs.leap").config(_, opts)
-      -- local leap = require "leap"
-      -- for k, v in pairs(opts) do
-      --   leap.opts[k] = v
-      -- end
-      -- leap.add_default_mappings(true)
-      -- leap.add_repeat_mappings(";", ",", {
-      --   -- False by default. If set to true, the keys will work like the
-      --   -- native semicolon/comma, i.e., forward/backward is understood in
-      --   -- relation to the last motion.
-      --   relative_directions = true,
-      --   -- By default, all modes are included.
-      --   modes = { "n", "x", "o" },
-      -- })
-      -- vim.keymap.del({ "x", "o" }, "x")
-      -- vim.keymap.del({ "x", "o" }, "X")
-    end,
-  },
-
-  {
-    "kdheepak/lazygit.nvim",
-    -- optional for floating window border decoration
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-    init = function()
-      require("telescope").load_extension "lazygit"
     end,
   },
 
@@ -251,6 +209,57 @@ local plugins = {
   { "nvim-pack/nvim-spectre" },
 
   {
+    "stevearc/aerial.nvim",
+    event = "VeryLazy",
+    -- Optional dependencies
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons",
+    },
+    opts = function()
+      return require "custom.configs.aerial"
+    end,
+    keys = {
+      { "<leader>a", "<cmd> AerialToggle <cr>", desc = "Aerial (Symbols)" },
+    },
+  },
+
+  -- lint
+  {
+    "mfussenegger/nvim-lint",
+    event = "VeryLazy",
+    config = function()
+      require "custom.configs.lint"
+    end,
+  },
+
+  -- util
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+  },
+
+  {
+    "ThePrimeagen/harpoon",
+  },
+
+  {
+    "wakatime/vim-wakatime",
+    lazy = false,
+  },
+
+  {
+    "kdheepak/lazygit.nvim",
+    -- optional for floating window border decoration
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    init = function()
+      require("telescope").load_extension "lazygit"
+    end,
+  },
+
+  {
     "nvim-telescope/telescope.nvim",
     dependencies = {
       { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
@@ -265,22 +274,6 @@ local plugins = {
     opts = function()
       return require "custom.configs.nvimtree"
     end,
-  },
-
-  {
-    "stevearc/aerial.nvim",
-    event = "VeryLazy",
-    -- Optional dependencies
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-      "nvim-tree/nvim-web-devicons",
-    },
-    opts = function()
-      return require "custom.configs.aerial"
-    end,
-    keys = {
-      { "<leader>a", "<cmd> AerialToggle <cr>", desc = "Aerial (Symbols)" },
-    },
   },
 
   {
