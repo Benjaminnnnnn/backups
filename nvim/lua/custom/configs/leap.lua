@@ -1,4 +1,6 @@
-local config = function(_, opts)
+local M = {}
+
+M.config = function(_, opts)
   local leap = require "leap"
   for k, v in pairs(opts) do
     leap.opts[k] = v
@@ -16,4 +18,4 @@ local config = function(_, opts)
   vim.keymap.del({ "x", "o" }, "X")
 end
 
-return config
+return M
