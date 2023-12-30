@@ -26,7 +26,7 @@ local opts = {
   auto_install = true,
 
   incremental_selection = {
-    enable = false,
+    enable = true,
     keymaps = {
       init_selection = "<leader>ii",
       node_incremental = "<leader>ii",
