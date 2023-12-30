@@ -232,17 +232,17 @@ local plugins = {
   },
 
   {
-    "numToStr/Comment.nvim",
+    "JoosepAlviste/nvim-ts-context-commentstring",
     opts = {
-      -- configure Comment.nvim to trigger the commentstring updating logic with its pre_hook configuration
-      pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+      enable_autocmd = false,
     },
   },
 
   {
-    "JoosepAlviste/nvim-ts-context-commentstring",
+    "numToStr/Comment.nvim",
     opts = {
-      enable_autocmd = false,
+      -- configure Comment.nvim to trigger the commentstring updating logic with its pre_hook configuration
+      pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
     },
   },
 
