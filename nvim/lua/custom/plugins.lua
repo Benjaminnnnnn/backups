@@ -73,6 +73,7 @@ local plugins = {
 
         -- formatter
         "prettier",
+        "prettierd",
         "gofumpt",
         "goimports-reviser",
         "golines",
