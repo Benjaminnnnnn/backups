@@ -9,7 +9,7 @@ import = [
 dynamic_padding = false
 decorations = "buttonless"
 startup_mode = "Maximized"
-opacity = 0.8
+opacity = 0.5
 blur = true
 
   [window.padding]
