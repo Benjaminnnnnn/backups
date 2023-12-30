@@ -28,7 +28,8 @@ local opts = {
   incremental_selection = {
     enable = true,
     keymaps = {
-      init_selection = "<leader>ii",
+      init_selection = "<c-left>",
+      -- init_selection = "<leader>ii",
       node_incremental = "<leader>ii",
       node_decremental = "<leader>id",
     },
