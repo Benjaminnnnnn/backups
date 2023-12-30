@@ -320,6 +320,21 @@ local plugins = {
     },
   },
 
+  {
+    "simrat39/symbols-outline.nvim",
+    opts = function ()
+     return require('custom.configs.symbols-outline') 
+    end,
+    cmd = {
+      "SymbolsOutline"
+    },
+    config = function (_, opts)
+      require("symbols-outline").setup(opts)
+      
+    end
+
+  }
+
   -- lint
   {
     "mfussenegger/nvim-lint",
@@ -330,10 +345,10 @@ local plugins = {
   },
 
   -- util
-  {
-    "christoomey/vim-tmux-navigator",
-    lazy = false,
-  },
+  -- {
+  --   "christoomey/vim-tmux-navigator",
+  --   lazy = false,
+  -- },
 
   {
     "ThePrimeagen/harpoon",
