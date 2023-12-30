@@ -3,10 +3,14 @@ local opts = {
 
   layout = {
     min_width = { 15 },
-    max_width = { 80 },
-    width = 0.25,
+    max_width = { 40, 0.2 },
     default_direction = "prefer_left",
     resize_to_content = true,
+    win_opts = {
+      winhl = "Normal:NormalFloat,FloatBorder:NormalFloat,SignColumn:SignColumnSB",
+      signcolumn = "yes",
+      statuscolumn = " ",
+    },
   },
 
   keymaps = {
@@ -56,6 +60,16 @@ local opts = {
   },
 
   highlight_on_hover = true,
+
+  autojump = true,
+
+  show_guides = true,
+  guides = {
+    mid_item = "├╴",
+    last_item = "└╴",
+    nested_top = "│ ",
+    whitespace = "  ",
+  },
 }
 
 return opts
