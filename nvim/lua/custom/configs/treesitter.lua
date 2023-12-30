@@ -68,7 +68,7 @@ local opts = {
       enable = true,
       set_jumps = false, -- whether to set jumps in the jumplist
       goto_next_start = {
-        ["]f"] = "@function.outer",
+        ["]m"] = "@function.outer",
         ["]]"] = { query = "@class.outer", desc = "Next class start" },
 
         -- You can use regex matching (i.e. lua pattern) and/or pass a list in a "query" key to group multiple queires.
@@ -81,11 +81,11 @@ local opts = {
         ["]z"] = { query = "@fold", query_group = "folds", desc = "Next fold" },
       },
       goto_next_end = {
-        ["]F"] = "@function.outer",
+        ["]M"] = "@function.outer",
         ["]["] = "@class.outer",
       },
       goto_previous_start = {
-        ["[f"] = "@function.outer",
+        ["[m"] = "@function.outer",
         ["[["] = "@class.outer",
 
         ["[o"] = "@loop.*",
@@ -94,7 +94,7 @@ local opts = {
         ["[z"] = { query = "@fold", query_group = "folds", desc = "Previous fold" },
       },
       goto_previous_end = {
-        ["[F"] = "@function.outer",
+        ["[M"] = "@function.outer",
         ["[]"] = "@class.outer",
       },
     },
