@@ -16,7 +16,7 @@ opacity = 1
   y = 0
 
 [font]
-size = 15
+size = 16
 
   [font.normal]
   family = "Hack Nerd Font"
