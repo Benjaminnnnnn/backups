@@ -318,7 +318,7 @@ local plugins = {
     keys = {
       { "<leader>a", "<cmd> AerialToggle <cr>", desc = "Aerial (Symbols)" },
     },
-    config = function(_, opts)
+    config = function()
       require("telescope").load_extension "aerial"
     end,
   },
