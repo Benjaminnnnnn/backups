@@ -110,7 +110,10 @@ M.telescope = {
       "Go to definition",
     },
     ["<leader>ds"] = {
-      "<cmd> Telescope lsp_document_symbols <CR>",
+      function()
+        require("telescope").extensions.aerial.aerial()
+      end,
+      -- "<cmd> Telescope lsp_document_symbols <CR>",
       "List symbols in current buffer",
     },
     ["<leader>ws"] = {
