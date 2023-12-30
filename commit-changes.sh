@@ -13,7 +13,7 @@ cp $HOME/.zshrc ./zsh/
 cp -r $HOME/.zsh/* ./zsh/
 
 # alacritty config
-cp $HOME/.config/alacritty/alacritty.toml ./alacritty/
+cp -rf $HOME/.config/alacritty/ ./alacritty/
 
 # sync
 git add .
