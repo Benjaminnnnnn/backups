@@ -40,4 +40,4 @@ size = 16
 
 [shell]
 program = "/bin/zsh"
-args = []
+# args = []
