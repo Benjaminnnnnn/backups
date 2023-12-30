@@ -36,13 +36,24 @@ local opts = {
     lsp_doc_border = false, -- add a border to hover docs and signature help
   },
   routes = {
+    -- {
+    --   filter = {
+    --     event = "msg_show",
+    --     kind = "",
+    --     find = "written",
+    --   },
+    --   opts = { skip = true },
+    -- },
     {
       filter = {
         event = "msg_show",
-        kind = "",
-        find = "written",
+        any = {
+          { find = "%d+L, %d+B" },
+          { find = "; after #%d+" },
+          { find = "; before #%d+" },
+        },
       },
-      opts = { skip = true },
+      view = "mini",
     },
     {
       view = "split",
@@ -54,6 +65,7 @@ local opts = {
     },
     {
       view = "notify",
+
       filter = { event = "msg_showmode" },
     },
   },
