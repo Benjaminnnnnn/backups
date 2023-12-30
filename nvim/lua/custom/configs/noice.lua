@@ -64,7 +64,7 @@ local opts = {
       opts = { skip = true },
     },
     {
-      view = "notify",
+      view = "cmdline",
       filter = { event = "msg_showmode" },
     },
   },
