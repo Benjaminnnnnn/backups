@@ -97,7 +97,6 @@ local plugins = {
     end,
   },
 
-
   -- UI
   {
     "NvChad/nvim-colorizer.lua",
@@ -232,21 +231,22 @@ local plugins = {
     ft = { "markdown" },
   },
 
-{
-        "numToStr/Comment.nvim",
-    dependencies={
-{
-    "JoosepAlviste/nvim-ts-context-commentstring",
-    opts = {
-      enable_autocmd = false,
-    },
-  }
-    },
+  {
+    "numToStr/Comment.nvim",
+    dependencies = {
+      {
+        "JoosepAlviste/nvim-ts-context-commentstring",
+        lazy = false,
         opts = {
-          -- configure Comment.nvim to trigger the commentstring updating logic with its pre_hook configuration
-          -- pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+          enable_autocmd = false,
         },
       },
+    },
+    opts = {
+      -- configure Comment.nvim to trigger the commentstring updating logic with its pre_hook configuration
+      -- pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+    },
+  },
 
   -- debugger
   {
