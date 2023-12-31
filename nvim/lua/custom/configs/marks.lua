@@ -23,6 +23,9 @@ require("marks").setup {
     "TelescopePrompt",
     "cmp_menu",
     "cmp_docs",
+    "NvimTree",
+    "Trouble",
+    "aerial",
   },
   -- marks.nvim allows you to configure up to 10 bookmark groups, each with its own
   -- sign/virttext. Bookmarks can be used to group together positions and quickly move
