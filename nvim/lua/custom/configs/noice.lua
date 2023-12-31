@@ -20,7 +20,7 @@ local opts = {
     popupmenu = {
       relative = "editor",
       position = {
-        row = 8,
+        row = 10,
         col = "50%",
       },
       size = {
