@@ -233,33 +233,23 @@ local plugins = {
 
   {
     "JoosepAlviste/nvim-ts-context-commentstring",
+    lazy= false,
     opts = {
       enable_autocmd = false,
     },
   },
 
-  {
-    "numToStr/Comment.nvim",
-    keys = {
-      { "gcc", mode = "n", desc = "Comment toggle current line" },
-      { "gc", mode = { "n", "o" }, desc = "Comment toggle linewise" },
-      { "gc", mode = "x", desc = "Comment toggle linewise (visual)" },
-      { "gbc", mode = "n", desc = "Comment toggle current block" },
-      { "gb", mode = { "n", "o" }, desc = "Comment toggle blockwise" },
-      { "gb", mode = "x", desc = "Comment toggle blockwise (visual)" },
-    },
-    init = function()
-      require("core.utils").load_mappings "comment"
-    end,
-
-    opts = {
-      -- configure Comment.nvim to trigger the commentstring updating logic with its pre_hook configuration
-      pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
-    },
-    config = function(_, opts)
-      require("Comment").setup(opts)
-    end,
-  },
+  -- {
+  --   "numToStr/Comment.nvim",
+  --   event="VeryLazy",
+  --   opts = {
+  --     -- configure Comment.nvim to trigger the commentstring updating logic with its pre_hook configuration
+  --     pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+  --   },
+  --   config = function(_, opts)
+  --     require("Comment").setup(opts)
+  --   end,
+  -- },
 
   -- debugger
   {
