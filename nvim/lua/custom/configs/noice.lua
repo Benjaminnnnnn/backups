@@ -11,23 +11,23 @@ local opts = {
         row = "50%",
       },
     },
-    popupmenu = {
-      relative = "editor",
-      position = {
-        col = "50%",
-      },
-      size = {
-        width = 60,
-        height = 10,
-      },
-      border = {
-        style = "rounded",
-        padding = { 0, 1 },
-      },
-      win_options = {
-        winhighlight = { Normal = "Normal", FloatBorder = "DiagnosticInfo" },
-      },
-    },
+    -- popupmenu = {
+    --   relative = "editor",
+    --   position = {
+    --     col = "50%",
+    --   },
+    --   size = {
+    --     width = 60,
+    --     height = 10,
+    --   },
+    --   border = {
+    --     style = "rounded",
+    --     padding = { 0, 1 },
+    --   },
+    --   win_options = {
+    --     winhighlight = { Normal = "Normal", FloatBorder = "DiagnosticInfo" },
+    --   },
+    -- },
   },
   lsp = {
     -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
