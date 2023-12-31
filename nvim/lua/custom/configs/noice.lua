@@ -36,25 +36,25 @@ local opts = {
     lsp_doc_border = false, -- add a border to hover docs and signature help
   },
   routes = {
-    {
-      filter = {
-        event = "msg_show",
-        kind = "",
-        find = "written",
-      },
-      opts = { skip = true },
-    },
     -- {
     --   filter = {
     --     event = "msg_show",
-    --     any = {
-    --       { find = "%d+L, %d+B" },
-    --       { find = "; after #%d+" },
-    --       { find = "; before #%d+" },
-    --     },
+    --     kind = "",
+    --     find = "written",
     --   },
-    --   view = "cmdline",
+    --   opts = { skip = true },
     -- },
+    {
+      filter = {
+        event = "msg_show",
+        any = {
+          { find = "%d+L, %d+B" },
+          { find = "; after #%d+" },
+          { find = "; before #%d+" },
+        },
+      },
+      view = "mini",
+    },
     {
       view = "split",
       filter = { event = "msg_show", min_height = 20 },
