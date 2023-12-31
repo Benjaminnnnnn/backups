@@ -53,7 +53,7 @@ local opts = {
           { find = "; before #%d+" },
         },
       },
-      view = "cmdline",
+      -- view = "cmdline",
     },
     {
       view = "split",
