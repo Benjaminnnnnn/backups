@@ -238,7 +238,7 @@ local plugins = {
     },
   },
 
-{
+  {
     "numToStr/Comment.nvim",
     keys = {
       { "gcc", mode = "n", desc = "Comment toggle current line" },
@@ -254,13 +254,12 @@ local plugins = {
 
     opts = {
       -- configure Comment.nvim to trigger the commentstring updating logic with its pre_hook configuration
-      pre_hook = 
-        {require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook()}
+      pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
     },
     config = function(_, opts)
       require("Comment").setup(opts)
     end,
-  }
+  },
 
   -- debugger
   {
