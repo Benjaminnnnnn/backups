@@ -244,7 +244,7 @@ local plugins = {
     },
     opts = {
       -- configure Comment.nvim to trigger the commentstring updating logic with its pre_hook configuration
-      -- pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+      pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
     },
   },
 
