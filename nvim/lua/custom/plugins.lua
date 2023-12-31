@@ -232,15 +232,14 @@ local plugins = {
   },
 
   {
-    "numToStr/Comment.nvim",
-    dependencies = {
-      {
-        "JoosepAlviste/nvim-ts-context-commentstring",
-        opts = {
-          enable_autocmd = false,
-        },
-      },
+    "JoosepAlviste/nvim-ts-context-commentstring",
+    opts = {
+      enable_autocmd = false,
     },
+  },
+
+  {
+    "numToStr/Comment.nvim",
     opts = {
       -- configure Comment.nvim to trigger the commentstring updating logic with its pre_hook configuration
       pre_hook = function()
