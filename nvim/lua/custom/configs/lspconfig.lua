@@ -31,9 +31,9 @@ for _, lsp in ipairs(servers) do
   local opts = {
     on_attach = on_attach,
     capabilities = capabilities,
-    autotag = {
-      enable = true,
-    },
+    -- autotag = {
+    --   enable = true,
+    -- },
   }
 
   -- add extra config for individual lsp
