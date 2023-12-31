@@ -113,6 +113,12 @@ local opts = {
   },
 
   indent = { enable = true },
+
+  autotag = {
+    enable = true,
+    enable_rename = true,
+    enable_close = true,
+  },
 }
 
 return opts
