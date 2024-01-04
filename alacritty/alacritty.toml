@@ -39,20 +39,12 @@ size = 16
   x = 0
   y = 0
 
-[[keyboard]]
-key = "F"
-mods = "Alt"
-chars = "\u001bf"
 
-[[keyboard]]
-key = "B"
-mods = "Alt"
-chars = "\u001bb"
-
-[[keyboard]]
-key = "I"
-mods = "Alt"
-chars = "\u001bi"
+[keyboard]
+bindings = [
+  { key: F,  mods: Alt,           chars: "\x1bf"                       },
+  { key: B,  mods: Alt,           chars: "\x1bb"                       }
+]
 
 [shell]
 program = "/bin/zsh"
