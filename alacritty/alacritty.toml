@@ -11,6 +11,7 @@ decorations = "buttonless"
 startup_mode = "Maximized"
 opacity = 0.5
 blur = true
+option_as_alt = "both"
 
   [window.padding]
   x = 0
@@ -40,12 +41,12 @@ size = 16
   y = 0
 
 
-[keyboard]
-bindings = [
-  { key = "F",  mods = "Alt",           chars = "\u001bf"                       },
-  { key = "B",  mods = "Alt",           chars = "\u001bb"                       },
-  { key = "I",  mods = "Alt",           chars = "\u001bi"                       }
-]
+# [keyboard]
+# bindings = [
+#   { key = "F",  mods = "Alt",           chars = "\u001bf"                       },
+#   { key = "B",  mods = "Alt",           chars = "\u001bb"                       },
+#   { key = "I",  mods = "Alt",           chars = "\u001bi"                       }
+# ]
 
 [shell]
 program = "/bin/zsh"
