@@ -58,7 +58,7 @@ local opts = {
     "Method",
     "Object",
     "Struct",
-    "Variable",
+    -- "Variable",
   },
 
   highlight_on_hover = true,
