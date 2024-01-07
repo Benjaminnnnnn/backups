@@ -15,6 +15,9 @@ cp -r $HOME/.zsh/* ./zsh/
 # alacritty config
 cp $HOME/.config/alacritty/alacritty.toml ./alacritty/alacritty.toml
 
+# starship config
+cp $HOME/.config/starship.toml ./starship/starship.toml
+
 # sync
 git add .
 git commit -m "Sync configs"
