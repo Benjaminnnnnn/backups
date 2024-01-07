@@ -15,8 +15,8 @@ blur = true
 option_as_alt = "Both"
 
   [window.padding]
-  x = 0
-  y = 0
+  x = 3
+  y = 3
 
 [font]
 size = 16
