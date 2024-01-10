@@ -22,7 +22,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-prompt)
+plugins=(git git-prompt tmux)
 
 source $ZSH/oh-my-zsh.sh
 # source ~/powerlevel10k/powerlevel10k.zsh-theme
