@@ -77,6 +77,16 @@ for _, lsp in ipairs(servers) do
         },
       },
     })
+  elseif lsp == "rust_analyzer" then
+    opts = merge_tb("force", opts, {
+      settings = {
+        ["rust_analyzer"] = {
+          cargo = {
+            allFeatures = true,
+          },
+        },
+      },
+    })
   end
 
   lspconfig[lsp].setup(opts)
