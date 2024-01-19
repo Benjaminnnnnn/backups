@@ -97,6 +97,14 @@ local plugins = {
     end,
   },
 
+  -- {
+  --   "rust-lang/rust.vim",
+  --   ft = "rust",
+  --   init = function ()
+  --    vim.g.rustfmt_autosave = 1
+  --   end
+  -- }
+
   -- UI
   {
     "NvChad/nvim-colorizer.lua",
