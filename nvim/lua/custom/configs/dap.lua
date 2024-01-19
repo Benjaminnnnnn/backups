@@ -25,9 +25,13 @@ end
 -- Rust/C/C++
 dap.adapters.codelldb = {
   type = "server",
-  port = "${port}",
+  host = "127.0.0.1",
+  port = 13000,
   executable = {
-    command = vim.fn.expand "~" .. "/.local/share/nvim/mason/packages/codelldb/extension/adapter/codelldb",
-    args = { "--port", "${port}" },
+    command = vim.fn.stdpath "data" .. "/mason/packages/codelldb/extension/adapter/codelldb",
+    args = { "--port", "13000" },
+
+    -- on windows you may have to uncomment this:
+    -- detached = false,
   },
 }
