@@ -23,11 +23,11 @@ for _, language in ipairs { "typescript", "javascript" } do
 end
 
 -- Rust/C/C++
-dap.adapters.codelldb = {
-  type = "server",
-  port = "${port}",
-  executable = {
-    command = "$HOME/.local/share/nvim/mason/packages/codelldb",
-    args = { "--port", "${port}" },
-  },
-}
+-- dap.adapters.codelldb = {
+--   type = "server",
+--   port = "${port}",
+--   executable = {
+--     command = "$HOME/.local/share/nvim/mason/packages/codelldb",
+--     args = { "--port", "${port}" },
+--   },
+-- }
