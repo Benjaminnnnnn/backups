@@ -65,13 +65,13 @@ M.dap = {
       "<cmd> DapContinue <CR>",
       "Run or continue the debugger",
     },
-    ["<F11>"] = {
-      "<cmd> DapStepInto <CR>",
-      "Enter the next method to follow its execution line-by-line",
-    },
     ["<F10>"] = {
       "<cmd> DapStepOver <CR>",
       "Execute the next method as a single command without inspecting or following its component steps",
+    },
+    ["<F11>"] = {
+      "<cmd> DapStepInto <CR>",
+      "Enter the next method to follow its execution line-by-line",
     },
   },
 }
