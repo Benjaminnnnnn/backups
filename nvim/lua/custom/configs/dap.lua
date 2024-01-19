@@ -27,7 +27,7 @@ dap.adapters.codelldb = {
   type = "server",
   port = "${port}",
   executable = {
-    command = "/usr/bin/codelldb",
+    command = "$HOME/.local/share/nvim/mason/packages/codelldb",
     args = { "--port", "${port}" },
   },
 }
