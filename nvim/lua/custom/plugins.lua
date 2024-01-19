@@ -97,14 +97,13 @@ local plugins = {
     end,
   },
 
-  -- {
-  --   "rust-lang/rust.vim",
-  --   ft = "rust",
-  --   init = function ()
-  --    vim.g.rustfmt_autosave = 1
-  --   end
-  -- }
-
+  {
+    "saecki/crates.nvim",
+    tag = "stable",
+    config = function()
+      require("crates").setup()
+    end,
+  },
   -- UI
   {
     "NvChad/nvim-colorizer.lua",
