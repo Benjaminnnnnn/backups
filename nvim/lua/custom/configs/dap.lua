@@ -23,13 +23,17 @@ for _, language in ipairs { "typescript", "javascript" } do
 end
 
 -- Rust/C/C++
+local codelldb_root = mason_registry.get_package("codelldb"):get_install_path() .. "/extension/"
+local codelldb_path = codelldb_root .. "adapter/codelldb"
+local liblldb_path = codelldb_root .. "lldb/lib/liblldb.dylib"
+
 dap.adapters.codelldb = {
   type = "server",
   host = "127.0.0.1",
-  port = 13000,
+  port = "${port}",
   executable = {
-    command = vim.fn.stdpath "data" .. "/mason/packages/codelldb/extension/adapter/codelldb",
-    args = { "--port", "13000" },
+    command = codelldb_path,
+    args = { "--liblldb", liblldb_path, "--port", "${port}" },
 
     -- on windows you may have to uncomment this:
     -- detached = false,
