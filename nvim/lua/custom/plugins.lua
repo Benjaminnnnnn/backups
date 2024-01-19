@@ -82,6 +82,7 @@ local plugins = {
         -- dap
         "js-debug-adapter",
         "go-debug-adapter",
+        "codelldb",
       },
     },
   },
