@@ -25,7 +25,8 @@ end
 -- Rust/C/C++
 dap.adapters.codelldb = {
   type = "server",
-  port = 13000, -- 💀 Use the port printed out or specified with `--port`
+  host = "127.0.0.1",
+  port = 8124, -- 💀 Use the port printed out or specified with `--port`
 }
 -- dap.adapters.codelldb = {
 --   type = "server",
