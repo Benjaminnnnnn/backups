@@ -23,6 +23,11 @@ for _, language in ipairs { "typescript", "javascript" } do
 end
 
 -- Rust/C/C++
+dap.adapters.codelldb = {
+  type = "server",
+  host = "127.0.0.1",
+  port = 13000, -- 💀 Use the port printed out or specified with `--port`
+}
 -- dap.adapters.codelldb = {
 --   type = "server",
 --   port = "${port}",
