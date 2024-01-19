@@ -25,14 +25,9 @@ end
 -- Rust/C/C++
 dap.adapters.codelldb = {
   type = "server",
-  host = "127.0.0.1",
-  port = 8124, -- 💀 Use the port printed out or specified with `--port`
+  port = "${port}",
+  executable = {
+    command ="~/.local/share/nvim/mason/packages/codelldb/extension/adapter"
+    args = { "--port", "${port}" },
+  },
 }
--- dap.adapters.codelldb = {
---   type = "server",
---   port = "${port}",
---   executable = {
---     command = "$HOME/.local/share/nvim/mason/packages/codelldb",
---     args = { "--port", "${port}" },
---   },
--- }
