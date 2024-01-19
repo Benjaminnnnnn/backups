@@ -112,18 +112,18 @@ local plugins = {
     version = "^3", -- Recommended
     ft = { "rust" },
     init = function()
-      -- require "custom.configs.rustaceanvim"
-      vim.g.rustaceanvim = {
-        dap = {
-          load_rust_types = false,
-          configuration = {
-            name = "Rust debug client",
-            type = "codelldb",
-            request = "launch",
-            stopOnEntry = false,
-          },
-        },
-      }
+      require "custom.configs.rustaceanvim"
+      -- vim.g.rustaceanvim = {
+      --   dap = {
+      --     load_rust_types = false,
+      --     configuration = {
+      --       name = "Rust debug client",
+      --       type = "codelldb",
+      --       request = "launch",
+      --       stopOnEntry = false,
+      --     },
+      --   },
+      -- }
     end,
   },
 
