@@ -82,7 +82,7 @@ for _, lsp in ipairs(servers) do
       settings = {
         ["rust_analyzer"] = {
           cargo = {
-            allFeatures = true,
+            features = "all",
           },
         },
       },
