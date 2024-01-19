@@ -7,7 +7,7 @@ MASON_PATH = HOME_PATH .. ".local/share/nvim/mason/packages/"
 local codelldb_path = MASON_PATH .. "codelldb/extension/adapter/codelldb"
 local liblldb_path = MASON_PATH .. "codelldb/extension/lldb/lib/liblldb.dylib"
 
-local options = {
+local opts = {
   server = {
     on_attach = on_attach,
     capabilities = capabilities,
@@ -17,4 +17,4 @@ local options = {
   },
 }
 
-return options
+return opts
