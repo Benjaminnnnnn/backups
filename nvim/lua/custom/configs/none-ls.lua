@@ -10,6 +10,7 @@ local sources = {
   formatting.gofumpt,
   formatting.goimports_reviser,
   formatting.golines,
+  formatting.rustfmt,
   formatting.black,
   formatting.shfmt,
 
