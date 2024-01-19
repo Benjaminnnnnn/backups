@@ -34,4 +34,7 @@ dap.adapters.codelldb = {
     -- on windows you may have to uncomment this:
     -- detached = false,
   },
+  options = {
+    initialize_timeout_sec = 10,
+  },
 }
