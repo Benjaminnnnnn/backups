@@ -104,6 +104,7 @@ local plugins = {
       require("crates").setup()
     end,
   },
+
   -- UI
   {
     "NvChad/nvim-colorizer.lua",
