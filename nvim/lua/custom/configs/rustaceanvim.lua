@@ -22,6 +22,10 @@ vim.g.rustaceanvim = function()
   local cfg = require "rustaceanvim.config"
 
   return {
+    -- LSP configuration
+    server = {
+      on_attach = function(client, bufnr) end,
+    },
     dap = {
       adapter = cfg.get_codelldb_adapter(codelldb_path, liblldb_path),
     },
