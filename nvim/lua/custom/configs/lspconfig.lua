@@ -81,13 +81,11 @@ for _, lsp in ipairs(servers) do
     })
   elseif lsp == "rust_analyzer" then
     opts = merge_tb("force", opts, {
-      filetypes = { "rust" },
-      root_dir = util.root_pattern("Cargo.toml", "rust-project.json"),
       settings = {
         ["rust-analyzer"] = {
           cargo = {
             -- features = "all",
-            allFeatures = "true",
+            allFeatures = true,
           },
         },
       },
