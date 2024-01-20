@@ -8,7 +8,7 @@ vim.g.rustaceanvim = function()
   local codelldb_path = extension_path .. "/adapter/codelldb"
   local liblldb_path = extension_path .. "/lldb/lib/liblldb"
 
-  local this_os = vim.uv.os_uname().sysname
+  local this_os = vim.loop.os_uname().sysname
 
   -- The path is different on Windows
   if this_os:find "Windows" then
