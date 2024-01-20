@@ -84,7 +84,7 @@ for _, lsp in ipairs(servers) do
       filetypes = { "rust" },
       root_dir = util.root_pattern("Cargo.toml", "rust-project.json"),
       settings = {
-        ["rust_analyzer"] = {
+        ["rust-analyzer"] = {
           cargo = {
             -- features = "all",
             allFeatures = "true",
