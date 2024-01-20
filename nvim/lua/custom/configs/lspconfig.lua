@@ -3,6 +3,8 @@ local on_attach = base.on_attach
 local capabilities = base.capabilities
 
 local lspconfig = require "lspconfig"
+local util = require "lspconfig/util"
+
 local servers = {
   "html",
   "cssls",
@@ -79,10 +81,13 @@ for _, lsp in ipairs(servers) do
     })
   elseif lsp == "rust_analyzer" then
     opts = merge_tb("force", opts, {
+      filetypes = { "rust" },
+      root_dir = util.root_pattern "Cargo.toml",
       settings = {
         ["rust_analyzer"] = {
           cargo = {
-            features = "all",
+            -- features = "all",
+            allFeatures = "true",
           },
         },
       },
