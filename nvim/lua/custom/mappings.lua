@@ -1,10 +1,6 @@
 local M = {}
 
-M.disabled = {
-  n = {
-    "<leader>b",
-  },
-}
+M.disabled = {}
 
 M.general = {
   n = {
