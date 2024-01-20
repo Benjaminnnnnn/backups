@@ -111,9 +111,9 @@ local plugins = {
     "mrcjkb/rustaceanvim",
     version = "^3", -- Recommended
     ft = { "rust" },
-    init = function()
-      require "custom.configs.rustaceanvim"
-    end,
+    -- init = function()
+    --   require "custom.configs.rustaceanvim"
+    -- end,
   },
 
   -- UI
