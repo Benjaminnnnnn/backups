@@ -40,4 +40,10 @@ vim.filetype.add {
   },
 }
 
+function DebugGX()
+  vim.api.nvim_out_write("Debugging gx: " .. vim.fn.expand "<cWORD>" .. "\n")
+end
+
+vim.api.nvim_set_keymap("n", "gx", [[:lua DebugGX()<CR>]], { noremap = true, silent = true })
+
 return M
