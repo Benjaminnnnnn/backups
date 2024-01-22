@@ -20,6 +20,7 @@ opt.ruler = true
 opt.colorcolumn = "100"
 opt.relativenumber = true
 
+-- set up netrw for 'gx' mapping
 vim.g.netrw_browsex_viewer = "xdg-open"
 
 -- make zsh files recognized as sh for bash-ls & treesitter
