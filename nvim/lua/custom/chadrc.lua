@@ -15,10 +15,11 @@ M.ui = {
 M.plugins = "custom.plugins"
 M.mappings = require "custom.mappings"
 
-local opt = vim.opt
-opt.ruler = true
-opt.colorcolumn = "100"
-opt.relativenumber = true
+-- line break configuration
+vim.opt.textwidth = 79
+vim.opt.colorcolumn = { 80, 120 }
+vim.opt.breakindent = true
+vim.opt.linebreak = true
 
 -- set up netrw for 'gx' mapping
 vim.g.netrw_browsex_viewer = "xdg-open"
