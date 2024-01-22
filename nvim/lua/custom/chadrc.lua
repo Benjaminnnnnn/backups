@@ -26,7 +26,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- set up netrw for 'gx' mapping
-vim.g.netrw_browsex_viewer = "xdg-open"
+vim.g.netrw_browsex_viewer = "open"
 
 -- make zsh files recognized as sh for bash-ls & treesitter
 vim.filetype.add {
