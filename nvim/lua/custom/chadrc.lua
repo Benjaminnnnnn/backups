@@ -20,6 +20,8 @@ opt.ruler = true
 opt.colorcolumn = "100"
 opt.relativenumber = true
 
+vim.g.netrw_browsex_viewer = "xdg-open"
+
 -- make zsh files recognized as sh for bash-ls & treesitter
 vim.filetype.add {
   extension = {
