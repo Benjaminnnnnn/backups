@@ -15,6 +15,8 @@ M.ui = {
 M.plugins = "custom.plugins"
 M.mappings = require "custom.mappings"
 
+vim.g.netrw_altv = 1
+
 -- line break configuration
 vim.opt.textwidth = 79
 vim.opt.colorcolumn = { 80, 120 }
