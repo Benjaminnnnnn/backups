@@ -21,6 +21,10 @@ vim.opt.colorcolumn = { 80, 120 }
 vim.opt.breakindent = true
 vim.opt.linebreak = true
 
+-- show line numbers and highlight cursor line number
+vim.opt.number = true
+vim.opt.relativenumber = true
+
 -- set up netrw for 'gx' mapping
 vim.g.netrw_browsex_viewer = "xdg-open"
 
