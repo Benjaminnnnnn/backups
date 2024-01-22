@@ -144,13 +144,13 @@ local plugins = {
     end,
   },
 
-  {
-    "chentoast/marks.nvim",
-    init = function()
-      require "custom.configs.marks"
-    end,
-    event = "VeryLazy",
-  },
+  -- {
+  --   "chentoast/marks.nvim",
+  --   init = function()
+  --     require "custom.configs.marks"
+  --   end,
+  --   event = "VeryLazy",
+  -- },
 
   {
     "folke/noice.nvim",
