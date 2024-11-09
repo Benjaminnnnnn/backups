@@ -1,8 +1,7 @@
 local options = {
   ensure_installed = { "lua-language-server" }, -- not an option from mason.nvim
 
-  -- PATH = "skip",
-  PATH = "append",
+  PATH = "skip",
 
   ui = {
     icons = {
