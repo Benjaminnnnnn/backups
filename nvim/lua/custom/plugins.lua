@@ -57,6 +57,7 @@ local plugins = {
 
   {
     "williamboman/mason.nvim",
+    PATH = "append",
     opts = {
       ensure_installed = {
         -- lsp
