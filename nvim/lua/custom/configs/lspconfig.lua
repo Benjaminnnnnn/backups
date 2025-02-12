@@ -10,7 +10,7 @@ local servers = {
   "cssls",
   "clangd",
   "gopls",
-  "tsserver",
+  "ts_ls",
   "rust_analyzer",
   "tailwindcss",
   "pyright",
