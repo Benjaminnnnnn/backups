@@ -52,4 +52,4 @@ eval "$(starship init zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval "$(zoxide init zsh)"
-
+eval "$(/opt/homebrew/bin/brew shellenv)"
