@@ -7,6 +7,7 @@ fi
 
 # load all configurations
 for config (~/.zsh/*.sh)
+  echo $config
   source $config
 
 
