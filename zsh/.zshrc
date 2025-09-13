@@ -50,6 +50,4 @@ eval "$(starship init zsh)"
 # bun completions
 [ -s "/Users/benjaminzhuang/.bun/_bun" ] && source "/Users/benjaminzhuang/.bun/_bun"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 eval "$(zoxide init zsh)"
