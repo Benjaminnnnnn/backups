@@ -51,3 +51,4 @@ eval "$(starship init zsh)"
 [ -s "/Users/benjaminzhuang/.bun/_bun" ] && source "/Users/benjaminzhuang/.bun/_bun"
 
 eval "$(zoxide init zsh)"
+source <(fzf --zsh)
