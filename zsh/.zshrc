@@ -35,6 +35,9 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 eval "$(starship init zsh)"
 
+export PATH="$HOME/.jenv/bin:$PATH"
+  eval "$(jenv init -)"
+
 # load background
 # 249 - Lugia
 # 643 - Reshiram
