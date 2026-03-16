@@ -18,6 +18,14 @@ cp $HOME/.config/alacritty/alacritty.toml ./alacritty/alacritty.toml
 # starship config
 cp $HOME/.config/starship.toml ./starship/starship.toml
 
+# yazi config
+cp -r $HOME/.config/yazi ./yazi
+
+# ghostty config
+cp $HOME/.config/ghostty/config ./ghostty/config
+
+# lazygit config
+
 # sync
 git add .
 git commit -m "Sync configs"
