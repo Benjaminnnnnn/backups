@@ -8,3 +8,8 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS="
   --preview 'bat -n --color=always --theme=OneHalfDark {}'
   --bind 'ctrl-/:change-preview-window(down|hidden|),ctrl-d:reload(find . -type d),ctrl-f:reload(eval $FZF_DEFAULT_COMMAND)'"
+
+# Load environment variables from Python helper (e.g. OPENAI_API_KEY)
+if [ -x "$HOME/.zsh/set_env.py" ]; then
+  eval "$("$HOME/.zsh/set_env.py")"
+fi

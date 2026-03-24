@@ -1,7 +1,7 @@
 local options = {
   filters = {
     dotfiles = false,
-    exclude = { vim.fn.stdpath "config" .. "/lua/custom" },
+    exclude = { vim.fn.stdpath "config" .. "/lua/configs" },
     custom = { ".DS_Store.*" },
   },
   disable_netrw = true,
@@ -35,11 +35,9 @@ local options = {
     root_folder_label = false,
     highlight_git = true,
     highlight_opened_files = "name",
-
     indent_markers = {
       enable = false,
     },
-
     icons = {
       show = {
         file = true,
@@ -47,7 +45,6 @@ local options = {
         folder_arrow = true,
         git = true,
       },
-
       glyphs = {
         default = "󰈚",
         symlink = "",

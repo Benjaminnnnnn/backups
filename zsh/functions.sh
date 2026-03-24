@@ -44,3 +44,34 @@ function backup() {
 	rm -rf .git .github
 	popd >/dev/null || exit
 }
+
+openx() {
+  if [ -z "$1" ]; then
+    echo "Usage: openx <url-or-path>"
+    return 1
+  fi
+
+  arg="$1"
+  browser="Brave Browser"
+
+  # URLs → open in browser directly
+  if [[ "$arg" =~ ^https?:// ]]; then
+    open -a "$browser" "$arg"
+    return
+  fi
+
+  # Resolve filesystem path
+  resolved=$(realpath "$arg" 2>/dev/null)
+  if [ ! -e "$resolved" ]; then
+    echo "Error: '$arg' not found."
+    return 1
+  fi
+
+  # Convert spaces to %20 for file:// URL
+  encoded="${resolved// /%20}"
+  url="file://$encoded"
+
+  # Force open in browser
+  open -a "$browser" "$url"
+}
+  

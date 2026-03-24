@@ -58,13 +58,10 @@ local opts = {
     "Method",
     "Object",
     "Struct",
-    -- "Variable",
   },
 
   highlight_on_hover = true,
-
   autojump = true,
-
   show_guides = true,
   guides = {
     mid_item = "├╴",
