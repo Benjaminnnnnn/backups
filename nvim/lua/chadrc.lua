@@ -24,7 +24,6 @@ M.mason = {
     "shellcheck",
     "eslint-lsp",
     "css-lsp",
-    "prettier",
     "prettierd",
     "gofumpt",
     "goimports-reviser",

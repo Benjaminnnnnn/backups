@@ -15,10 +15,5 @@ require("marks").setup {
     "aerial",
     "terminal",
   },
-  bookmark_0 = {
-    sign = "⚑",
-    virt_text = "hello world",
-    annotate = false,
-  },
   mappings = {},
 }
