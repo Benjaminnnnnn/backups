@@ -20,34 +20,20 @@ sync_directory() {
   /usr/bin/rsync -a --delete "$@" "$src"/ "$dest"/
 }
 
-# tmux config
-sync_file "$HOME/.tmux.conf" "./tmux/.tmux.conf"
+add_watch_path() {
+  :
+}
 
-# nvim config
-sync_directory "$HOME/.config/nvim" "./nvim" \
-  --exclude '.git/' \
-  --exclude '.github/' \
-  --exclude '.gitignore'
+add_file_target() {
+  sync_file "$1" "$2"
+}
 
-# zsh config
-sync_file "$HOME/.zshrc" "./zsh/.zshrc"
-/usr/bin/rsync -a --delete \
-  --include '*/' \
-  --include '*.sh' \
-  --exclude '*' \
-  "$HOME/.zsh"/ "./zsh"/
+add_dir_target() {
+  sync_directory "$@"
+}
 
-# alacritty config
-sync_file "$HOME/.config/alacritty/alacritty.toml" "./alacritty/alacritty.toml"
-
-# starship config
-sync_file "$HOME/.config/starship.toml" "./starship/starship.toml"
-
-# yazi config
-sync_directory "$HOME/.config/yazi" "./yazi"
-
-# ghostty config
-sync_file "$HOME/.config/ghostty/config" "./ghostty/config"
+source "./sync-targets.sh"
+sync_targets
 
 git add .
 
