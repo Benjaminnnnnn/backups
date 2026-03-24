@@ -7,11 +7,11 @@ null_ls.setup {
     formatting.prettierd.with {
       prefer_local = "node_modules/.bin",
     },
-  formatting.stylua,
-  formatting.gofumpt,
-  formatting.goimports_reviser,
-  formatting.golines,
-  formatting.black,
-  formatting.shfmt,
+    formatting.stylua,
+    formatting.gofumpt,
+    formatting.goimports_reviser,
+    formatting.golines,
+    formatting.black,
+    formatting.shfmt,
   },
 }

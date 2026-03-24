@@ -134,9 +134,6 @@ for _, server in ipairs(servers) do
         cargo = {
           features = "all",
         },
-        rustfmt = {
-          extraArgs = {},
-        },
       },
     }
   end
