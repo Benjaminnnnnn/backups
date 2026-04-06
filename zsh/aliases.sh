@@ -4,3 +4,4 @@ alias lockscreen="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/R
 alias vim=nvim
 alias lg=lazygit
 alias yy=yazi
+alias cc=claude
