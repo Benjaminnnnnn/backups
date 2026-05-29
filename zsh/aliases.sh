@@ -5,4 +5,4 @@ alias vim=nvim
 alias lg=lazygit
 alias yy=yazi
 alias cc=claude
-alias cca=claude agents
+alias cca="claude agents"
