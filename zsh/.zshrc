@@ -26,6 +26,10 @@ plugins=(git tmux zsh-autosuggestions)
 
 source "$ZSH/oh-my-zsh.sh"
 
+if [[ -r "$HOME/google-cloud-sdk/completion.zsh.inc" ]]; then
+  source "$HOME/google-cloud-sdk/completion.zsh.inc"
+fi
+
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
