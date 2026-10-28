@@ -12,27 +12,4 @@ M.ui = {
   },
 }
 
-M.mason = {
-  pkgs = {
-    "gopls",
-    "lua-language-server",
-    "pyright",
-    "rust-analyzer",
-    "tailwindcss-language-server",
-    "typescript-language-server",
-    "bash-language-server",
-    "shellcheck",
-    "eslint-lsp",
-    "css-lsp",
-    "prettierd",
-    "gofumpt",
-    "goimports-reviser",
-    "golines",
-    "shfmt",
-    "js-debug-adapter",
-    "go-debug-adapter",
-    "codelldb",
-  },
-}
-
 return M

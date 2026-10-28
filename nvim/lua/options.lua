@@ -8,13 +8,3 @@ opt.breakindent = true
 opt.linebreak = true
 opt.number = true
 opt.relativenumber = true
-
-vim.filetype.add {
-  extension = {
-    zsh = "sh",
-  },
-  filename = {
-    [".zshrc"] = "sh",
-    [".zshenv"] = "sh",
-  },
-}

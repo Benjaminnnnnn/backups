@@ -1,21 +1,13 @@
 # OPENSPEC:START
 # OpenSpec shell completions configuration
 fpath=("/Users/benjaminzhuang/.oh-my-zsh/custom/completions" $fpath)
-autoload -Uz compinit
-compinit
 # OPENSPEC:END
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # load all configurations
-for config (~/.zsh/*.sh)
-  source $config
+for config in "$HOME/.zsh"/{variables,configurations,functions,others,aliases}.sh; do
+  source "$config"
+done
 
 
 # Set name of the theme to load --- if set to "random", it will
@@ -23,27 +15,25 @@ for config (~/.zsh/*.sh)
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="powerline"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME=""
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-prompt tmux zsh-autosuggestions)
+plugins=(git tmux zsh-autosuggestions)
 
-source $ZSH/oh-my-zsh.sh
-# source ~/powerlevel10k/powerlevel10k.zsh-theme
+source "$ZSH/oh-my-zsh.sh"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
-eval "$(starship init zsh)"
+if (( $+commands[starship] )); then eval "$(starship init zsh)"; fi
 
 export PATH="$HOME/.jenv/bin:$PATH"
-  eval "$(jenv init -)"
+# shortcut: jenv skips startup rehash, run jenv rehash after adding a Java version.
+if (( $+commands[jenv] )); then eval "$(jenv init - --no-rehash zsh)"; fi
 
 # load background
 # 249 - Lugia
@@ -60,9 +50,11 @@ export PATH="$HOME/.jenv/bin:$PATH"
 # bun completions
 [ -s "/Users/benjaminzhuang/.bun/_bun" ] && source "/Users/benjaminzhuang/.bun/_bun"
 
-eval "$(zoxide init zsh)"
-source <(fzf --zsh)
+if (( $+commands[zoxide] )); then eval "$(zoxide init zsh)"; fi
+if (( $+commands[fzf] )); then source <(fzf --zsh); fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+typeset -U path

@@ -51,6 +51,8 @@ return {
     end,
   },
 
+  { "stevearc/conform.nvim", enabled = false },
+
   {
     "olexsmir/gopher.nvim",
     ft = "go",

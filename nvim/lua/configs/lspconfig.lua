@@ -12,7 +12,7 @@ local formatters_by_ft = {
   javascriptreact = "null-ls",
   json = "null-ls",
   jsonc = "null-ls",
-  lua = "null-ls",
+  lua = "lua_ls",
   markdown = "null-ls",
   python = "null-ls",
   rust = "rust_analyzer",
@@ -20,19 +20,22 @@ local formatters_by_ft = {
   typescript = "null-ls",
   typescriptreact = "null-ls",
   yaml = "null-ls",
-  zsh = "null-ls",
 }
 
-local function supports_formatting(client)
-  if vim.fn.has "nvim-0.11" == 1 then
-    return client:supports_method "textDocument/formatting"
-  end
-
-  return client.supports_method and client.supports_method "textDocument/formatting"
+local function format(bufnr)
+  local formatter = formatters_by_ft[vim.bo[bufnr].filetype]
+  vim.lsp.buf.format {
+    async = false,
+    bufnr = bufnr,
+    timeout_ms = 5000,
+    filter = formatter and function(client)
+      return client.name == formatter
+    end or nil,
+  }
 end
 
 local function setup_format_on_save(client, bufnr)
-  if not supports_formatting(client) then
+  if not client:supports_method "textDocument/formatting" then
     return
   end
 
@@ -46,13 +49,7 @@ local function setup_format_on_save(client, bufnr)
     group = format_augroup,
     buffer = bufnr,
     callback = function()
-      vim.lsp.buf.format {
-        async = false,
-        bufnr = bufnr,
-        filter = formatter and function(format_client)
-          return format_client.name == formatter
-        end or nil,
-      }
+      format(bufnr)
     end,
   })
 end
@@ -142,3 +139,5 @@ for _, server in ipairs(servers) do
 end
 
 vim.lsp.enable(servers)
+
+return format
