@@ -4,7 +4,6 @@
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH=$PATH:/Users/benjaminzhuang/go/bin
-export PATH=$PATH:$HOME/.bun/bin/
 export PATH=$PATH:/Applications/Alacritty.app/Contents/MacOS
 export PATH=$PATH:$HOME/.local/bin
 # export PATH=~/anaconda3/bin:$PATH:usr/local/bin:~/.local/bin
