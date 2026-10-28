@@ -92,7 +92,7 @@ for _, server in ipairs(servers) do
 
   if server == "html" then
     local html = vim.fn.stdpath "data" .. "/mason/packages/css-lsp/node_modules/.bin/vscode-html-language-server"
-    -- shortcut: css-lsp bundles the HTML server; install html-lsp if that package stops bundling it.
+    -- shortcut: HTML uses css-lsp's bundled binary, install html-lsp if css-lsp stops bundling it.
     if vim.fn.executable "vscode-html-language-server" == 0 and vim.fn.executable(html) == 1 then
       opts.cmd = { html, "--stdio" }
     end
