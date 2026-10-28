@@ -39,8 +39,8 @@ function clearscreen() {
 # backups nvim config
 function backup() {
 	echo "Backup nvim configs"
-		mkdir -p "$HOME/backups" || return
-		cp -R "$HOME/.config/nvim" "$HOME/backups/"
+	mkdir -p "$HOME/backups" || return
+	cp -R "$HOME/.config/nvim" "$HOME/backups/"
 }
 
 openx() {
