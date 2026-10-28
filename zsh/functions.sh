@@ -2,9 +2,9 @@
 ##### FUNCTIONS
 function cdcs() {
 	if [[ $# -eq 0 ]]; then
-		cd "/Users/benjaminzhuang/Desktop/CSE_major_courses" || exit
+		cd "/Users/benjaminzhuang/Desktop/CSE_major_courses" || return
 	else
-		cd "/Users/benjaminzhuang/Desktop/CSE_major_courses/CSE_$1" || exit
+		cd "/Users/benjaminzhuang/Desktop/CSE_major_courses/CSE_$1" || return
 	fi
 }
 
@@ -26,11 +26,12 @@ function nlp() {
 }
 
 function clearscreen() {
+	local format
 	if [[ $# -eq 0 ]]; then
-		rm ~/Desktop/Screen\ Shot*
+		find "$HOME/Desktop" -maxdepth 1 -type f -name 'Screen Shot*' -exec rm -- {} +
 	else
 		for format in "$@"; do
-			cd ~/Desktop && ls | grep -Ei "$format" | xargs rm || exit
+			find "$HOME/Desktop" -maxdepth 1 -type f -name 'Screen Shot*' -iname "*$format*" -exec rm -- {} + || return
 		done
 	fi
 }
@@ -38,11 +39,8 @@ function clearscreen() {
 # backups nvim config
 function backup() {
 	echo "Backup nvim configs"
-	pushd . >/dev/null
-	cp -rf ~/.config/nvim ~/backups/.
-	cd ~/backups/nvim || exit
-	rm -rf .git .github
-	popd >/dev/null || exit
+		mkdir -p "$HOME/backups" || return
+		cp -R "$HOME/.config/nvim" "$HOME/backups/"
 }
 
 openx() {
