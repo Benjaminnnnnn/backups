@@ -15,5 +15,5 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/benjaminzhuang/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/benjaminzhuang/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc'; fi
 

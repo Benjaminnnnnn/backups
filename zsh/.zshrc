@@ -26,8 +26,8 @@ plugins=(git tmux zsh-autosuggestions)
 
 source "$ZSH/oh-my-zsh.sh"
 
-if [[ -r "$HOME/google-cloud-sdk/completion.zsh.inc" ]]; then
-  source "$HOME/google-cloud-sdk/completion.zsh.inc"
+if [[ -r "/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc" ]]; then
+  source "/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc"
 fi
 
 
